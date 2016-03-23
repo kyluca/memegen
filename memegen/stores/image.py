@@ -11,7 +11,7 @@ log = logging.getLogger(__name__)
 class MemeModel(db.Model):
     __tablename__ = 'memes'
     id = sa.Column(sa.Integer, primary_key=True, nullable=False)
-    key = sa.Column(sa.String, nullable=False)
+    key = sa.Column(sa.String, nullable=False, unique=True)
 
     def __repr__(self):
         return "<Meme(id='%s', key='%s')>" % (self.id, self.key)
@@ -45,8 +45,7 @@ class ImageModel:
         meme = db.session.query(MemeModel).filter_by(key=image.template.key).first()
         if not meme:
             meme = MemeModel(key=image.template.key)
-            db.session.add(meme)
-            db.session.commit()
+            meme.save()
 
         # look-up the word from the database, count the
         # occurances in this particular set of text
