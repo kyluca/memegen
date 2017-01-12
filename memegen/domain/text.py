@@ -10,7 +10,7 @@ class Text:
         '"': "''",
     }
 
-    def __init__(self, path=None):
+    def __init__(self, path=None, *, translate_spaces=True):
         if path is None:
             self._parts = []
         elif isinstance(path, str):
@@ -18,6 +18,7 @@ class Text:
         else:
             assert isinstance(path, list)
             self._parts = path
+        self._translate_spaces = translate_spaces
 
     def __str__(self):
         return ' / '.join(self.lines)
@@ -32,9 +33,6 @@ class Text:
             return ""
         else:
             return part.strip()
-
-    def get_line(self, index):
-        return self._format_line(self[index])
 
     @property
     def top(self):
@@ -51,7 +49,7 @@ class Text:
         previous_part = True
         for part in self:
             if part:
-                line = self._format_line(part)
+                line = self._format_line(part, self._translate_spaces)
                 lines.append(line)
             elif not previous_part:
                 break
@@ -72,7 +70,7 @@ class Text:
         return '/'.join(paths)
 
     @classmethod
-    def _format_line(cls, part):
+    def _format_line(cls, part, translate_spaces):
         for special, replacement in cls.SPECIAL.items():
             part = part.replace(replacement, special)
             part = part.replace(replacement.upper(), special)
@@ -83,7 +81,7 @@ class Text:
         previous_upper = True
         previous_char = None
         for i, char in enumerate(part):
-            if char in (cls.EMPTY, cls.SPACE):
+            if translate_spaces and char in (cls.EMPTY, cls.SPACE):
                 if char == previous_char:
                     chars[-1] = char
                     previous_char = None
@@ -124,3 +122,6 @@ class Text:
                 path = path.replace(special, replacement)
 
         return path
+
+    def get_line(self, index):
+        return self._format_line(self[index], self._translate_spaces)

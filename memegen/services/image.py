@@ -1,6 +1,11 @@
-from ..domain import Image
+import logging
+
+from ..domain import Image, Font
 
 from ._base import Service
+
+
+log = logging.getLogger(__name__)
 
 
 class ImageService(Service):
@@ -11,10 +16,10 @@ class ImageService(Service):
         self.font_store = font_store
         self.image_store = image_store
 
-    def create(self, template, text, style=None, font=None):
-        font = font or self.font_store.find('titilliumweb-black')
+    def create(self, template, text, font=None, **options):
+        font = font or self.font_store.find(Font.DEFAULT)
 
-        image = Image(template, text, style=style, font=font)
+        image = Image(template, text, font=font, **options)
 
         try:
             self.image_store.create(image)
@@ -24,14 +29,8 @@ class ImageService(Service):
             elif "image file" in str(exception):
                 exception = self.exceptions.InvalidImageLink
             raise exception from None
+        except SystemError as exception:
+            log.warning(exception)
+            raise self.exceptions.InvalidImageLink from None
 
         return image
-
-    def get_latest(self, count):
-        if count != 1:
-            raise NotImplementedError("TODO: support multiple")
-        return self.image_store.latest
-
-    @property
-    def latest(self):
-        return self.get_latest(1)

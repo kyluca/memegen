@@ -1,5 +1,38 @@
 # Revision History
 
+## 4.5
+
+- Added `?share=true` to force clients to receive HTML on image URLs.
+- Added `?width=<int>` to scale images to a specific width.
+- Added `?height=<int>` to scale images to a specific height.
+- Added `?width=<int>&height=<int>` to pad an image to specified dimensions.
+
+## 4.4
+
+- Added `?preview=true` option to images to disable caching and analytics for clients that show partial image previews.
+
+## 4.3
+
+- Added `{"redirect": false}` option on POST to `/api/templates/<key>`.
+
+## 4.2
+
+- Added special character support on POST to `/api/templates/<key>`.
+
+## 4.1
+
+- Added `/api/search/<query>` to support more advanced clients.
+
+## 4.0
+
+- Moved all API routes to nest under `/api/*`
+    + `/templates/*` is still supported for now via redirect
+- Removed the shorthand `/m/*` redirect to `/magic/*`
+
+## 3.0
+
+- Removed `'date'` key from `/api`.
+
 ## 2.3
 
 - Added support for custom fonts: `/custom/test.jpg?font=impact`

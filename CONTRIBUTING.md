@@ -5,23 +5,27 @@
 ### Requirements
 
 * Python 3.5+
-    * Windows: https://www.python.org/downloads
-    * Mac: `$ brew install python3`
-    * Linux: `python3.5` and `python3.5-dev` packages
-* PostgreSQL
-    * Windows: http://www.postgresql.org/download/windows/
-    * Mac: `$ brew install postgresql && brew services start postgresql`
-    * Linux: http://www.postgresql.org/download/
+    - Windows: https://www.python.org/downloads
+    - macOS: `$ brew install python3`
+    - Linux: `python3.5` and `python3.5-dev` packages
 * Make:
-    * Windows: http://cygwin.com/install.html
-    * Mac: https://developer.apple.com/xcode
-    * Linux: http://www.gnu.org/software/make (likely already installed)
+    - Windows: http://cygwin.com/install.html
+    - macOS: https://developer.apple.com/xcode
+    - Linux: http://www.gnu.org/software/make (likely already installed)
+* OpenJPEG:
+    - Windows: ?
+    - macOS: `$ brew install openjpeg`
+    - Linux: ?
+* libfreetype:
+    - Windows: ?
+    - macOS: `$ brew install freetype`
+    - Linux: ?
 
 ### Installation
 
 Create a virtual environment:
 
-```
+```sh
 $ make env
 ```
 
@@ -35,13 +39,13 @@ The `regexes` list is used for pattern matching on http://memegen.link/magic. If
 
 Run the server locally:
 
-```
+```sh
 $ make run
 ```
 
 or also launch it in your browser:
 
-```
+```sh
 $ make launch
 ```
 
@@ -49,7 +53,7 @@ $ make launch
 
 Run the checks to ensure your new template does not conflict with others:
 
-```
+```sh
 $ make validate
 ```
 
@@ -72,7 +76,7 @@ Everything from above with the addition of:
 
 After cloning the repository, create a virtualenv:
 
-```
+```sh
 $ make env
 ```
 
@@ -82,13 +86,13 @@ $ make env
 
 Manually run the tests and checkers:
 
-```
+```sh
 $ make ci
 ```
 
 or keep them running on change:
 
-```
+```sh
 $ make watch
 ```
 

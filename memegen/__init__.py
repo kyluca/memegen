@@ -1,9 +1,9 @@
-"""Package for MemeGen."""
+"""Package for memegen."""
 
 import sys
 
-__project__ = 'MemeGen'
-__version__ = '2.3'
+__project__ = 'memegen.link'
+__version__ = '4.5'
 
 VERSION = "{} v{}".format(__project__, __version__)
 

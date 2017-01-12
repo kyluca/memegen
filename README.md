@@ -1,16 +1,21 @@
-# MemeGen
+# memegen.link
 
 An API to generate meme images based solely on requested URLs.
 
 Unix: [![Unix Build Status](http://img.shields.io/travis/jacebrowning/memegen/master.svg)](https://travis-ci.org/jacebrowning/memegen)
-Windows: [![Windows Build Status](https://img.shields.io/appveyor/ci/jacebrowning/memegen.svg)](https://ci.appveyor.com/project/jacebrowning/memegen)<br>Metrics: [![Coverage Status](http://img.shields.io/coveralls/jacebrowning/memegen/master.svg)](https://coveralls.io/r/jacebrowning/memegen)
+Windows: [![Windows Build Status](https://img.shields.io/appveyor/ci/jacebrowning/memegen.svg)](https://ci.appveyor.com/project/jacebrowning/memegen)
+<br>
+Metrics: [![Coverage Status](http://img.shields.io/coveralls/jacebrowning/memegen/master.svg)](https://coveralls.io/r/jacebrowning/memegen)
 [![Scrutinizer Code Quality](http://img.shields.io/scrutinizer/g/jacebrowning/memegen.svg)](https://scrutinizer-ci.com/g/jacebrowning/memegen/?branch=master)
+<br>
+Issues: 
+[![Stories in Ready](https://badge.waffle.io/jacebrowning/memegen.svg?label=ready&title=ready)](http://waffle.io/jacebrowning/memegen)
 
 ## Generating Images
 
 Visit [http://memegen.link/api](http://memegen.link/api) to browse the API and view examples.
 
-MemeGen URLs contain all the information necessary to generate the image. For example, http://memegen.link/buzz/memes/memes-everywhere.jpg produces:
+The URLs contain all the information necessary to generate the image. For example, http://memegen.link/buzz/memes/memes-everywhere.jpg produces:
 
 ![Sample Image](http://memegen.link/buzz/memes/memes-everywhere.jpg)
 
@@ -18,7 +23,7 @@ But, the site can also produce masked URLs to conceal the joke:
 
 http://memegen.link/_YnV6egltZW1lcy9tZW1lcy1ldmVyeXdoZXJl.jpg
 
-For any MemeGen image, lose the extension to see a list of all format options:
+For any image, lose the extension to see a list of all format options:
 
 http://memegen.link/buzz/memes/memes-everywhere
 
@@ -63,22 +68,37 @@ For example, http://memegen.link/joker/pick-a-different-font/people-lose-their-m
 
 ![Custom Font](http://memegen.link/joker/pick-a-different-font/people-lose-their-minds.jpg?font=typoline-demo)
 
-## Adding Templates
+### Custom sizes
 
-[![Stories in Ready](https://badge.waffle.io/jacebrowning/memegen.svg?label=ready&title=ready)](http://waffle.io/jacebrowning/memegen)
+Images can be scaled to a specific width via `?width=<int>` or a specific height via `?height=
+<int>`. If both parameters are provided, the image will be padded to the exact dimensions.
+
+For example, https://memegen.link/both/width-or-height/why-not-both~q.jpg?height=350&width=600 produces:
+
+![Custom Size](https://memegen.link/both/width-or-height/why-not-both~q.jpg?height=350&width=600)
+
+### Preview Images
+
+API clients that want to show a preview of an image while the user is still typing should disable caching and analytics via `?preview=true`.
+
+### Social Media
+
+Add `?share=true` to optimize images sizes for sharing on social media.
+
+## Adding Templates
 
 To add a new template, please follow the [contributor instructions](CONTRIBUTING.md).
 
 Thanks go to [danieldiekmeier/memegenerator](https://github.com/danieldiekmeier/memegenerator) for the inspiration!
 
-## Slack Integration
+## Sample Clients
 
-Check out one of these projects:
+| Type | Language | Source | Link |
+| :-: | :-:| :-- | :-- |
+| Slack | Python | [nicolewhite/slack-meme](https://github.com/nicolewhite/slack-meme) | --- |
+| Slack | Go | [CptSpaceToaster/slackbot](https://github.com/CptSpaceToaster/slackbot) | --- |
+| Slack | --- | --- | http://www.memetizer.com |
+| Hain | JavaScript | [Metrakit/hain-plugin-meme](https://github.com/Metrakit/hain-plugin-meme) | --- |
+| Website | Clojure | [jasich/mighty-fine-memes](https://github.com/jasich/mighty-fine-memes) | http://www.mightyfinememes.com |
 
-* [nicolewhite/slack-meme](https://github.com/nicolewhite/slack-meme)
-* [CptSpaceToaster/slackbot](https://github.com/CptSpaceToaster/slackbot)
-* [Metrakit/hain-plugin-meme](https://github.com/Metrakit/hain-plugin-meme)
-
-or install an app:
-
-* [Meme Bot](https://slack.com/apps/A0H25FSUS-meme-bot)
+Additional clients can be found by searching for [code examples on GitHub](https://github.com/search?o=desc&q=%22memegen.link%22+&ref=searchresults&s=indexed&type=Code&utf8=%E2%9C%93).

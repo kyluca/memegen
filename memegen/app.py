@@ -6,10 +6,11 @@ from flask import request, current_app
 from flask_api import FlaskAPI
 from flask_api.exceptions import APIException, NotFound
 
+from . import extensions
 from . import services
 from . import stores
 from . import routes
-from . import extensions
+
 
 log = logging.getLogger('api')
 
@@ -39,7 +40,6 @@ def create_app(config):
     configure_logging(app)
 
     register_extensions(app)
-
     register_services(app)
     register_blueprints(app)
 
@@ -58,8 +58,7 @@ def configure_logging(app):
 
 
 def register_extensions(app):
-    extensions.db.init_app(app)
-    extensions.migrate.init_app(app, extensions.db)
+    extensions.cors.init_app(app, methods=['GET', 'OPTIONS'], allow_headers='*')
 
 
 def register_services(app):
@@ -111,12 +110,17 @@ def register_services(app):
 
 
 def register_blueprints(app):
-    app.register_blueprint(routes.aliases.blueprint)
-    app.register_blueprint(routes.fonts.blueprint)
+    app.register_blueprint(routes.api_aliases.blueprint)
+    app.register_blueprint(routes.api_fonts.blueprint)
+    app.register_blueprint(routes.api_legacy.blueprint)
+    app.register_blueprint(routes.api_links.blueprint)
+    app.register_blueprint(routes.api_magic.blueprint)
+    app.register_blueprint(routes.api_root.blueprint)
+    app.register_blueprint(routes.api_search.blueprint)
+    app.register_blueprint(routes.api_templates.blueprint)
+    app.register_blueprint(routes.custom.blueprint)
     app.register_blueprint(routes.image.blueprint)
     app.register_blueprint(routes.index.blueprint)
     app.register_blueprint(routes.latest.blueprint)
-    app.register_blueprint(routes.links.blueprint)
     app.register_blueprint(routes.magic.blueprint)
-    app.register_blueprint(routes.root.blueprint)
-    app.register_blueprint(routes.templates.blueprint)
+    app.register_blueprint(routes.static.blueprint)

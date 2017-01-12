@@ -5,75 +5,106 @@ from webargs import fields, flaskparser
 
 from .. import domain
 
-from ._common import route, display
+from ._cache import Cache
+from ._utils import route, track, display
 
 
-blueprint = Blueprint('image', __name__, url_prefix="/")
+blueprint = Blueprint('image', __name__)
 log = logging.getLogger(__name__)
+cache = Cache()
 
 OPTIONS = {
-    'alt': fields.Str(missing=None),  # pylint: disable=no-member
-    'font': fields.Str(missing=None),  # pylint: disable=no-member
+    'alt': fields.Str(missing=None),
+    'font': fields.Str(missing=None),
+    'preview': fields.Bool(missing=False),
+    'share': fields.Bool(missing=False),
+    'width': fields.Int(missing=None),
+    'height': fields.Int(missing=None),
 }
 
 
-@blueprint.route("latest.jpg")
-def get_latest():
-    title = "Latest Meme"
-    try:
-        return display(title, app.image_service.latest)
-    except FileNotFoundError:
-        return display(title, "static/images/missing.png", mimetype='image/png')
+@blueprint.route("/latest.jpg")
+@blueprint.route("/latest<int:index>.jpg")
+def get_latest(index=1):
+    kwargs = cache.get(index - 1)
+
+    if not kwargs:
+        kwargs['key'] = 'custom'
+        kwargs['path'] = "your-meme/goes-here"
+        kwargs['alt'] = "https://raw.githubusercontent.com/jacebrowning/memegen/master/memegen/static/images/missing.png"
+
+    return redirect(route('.get', _external=True, **kwargs))
 
 
-@blueprint.route("<key>.jpg")
+@blueprint.route("/<key>.jpg")
 @flaskparser.use_kwargs(OPTIONS)
-def get_without_text(key, **kwargs):
+def get_without_text(key, **options):
+    options.pop('preview')
+    options.pop('share')
+
     template = app.template_service.find(key)
     text = domain.Text(template.default_path)
-    return redirect(route('.get', key=key, path=text.path, **kwargs))
+
+    return redirect(route('.get', key=key, path=text.path, **options))
 
 
-@blueprint.route("<key>.jpeg")
+@blueprint.route("/<key>.jpeg")
 def get_without_text_jpeg(key):
     return redirect(route('.get_without_text', key=key))
 
 
-@blueprint.route("<key>/<path:path>.jpg", endpoint='get')
+@blueprint.route("/<key>/<path:path>.jpg", endpoint='get')
 @flaskparser.use_kwargs(OPTIONS)
-def get_with_text(key, path, alt, font):
+def get_with_text(key, path, alt, font, preview, share, **size):
+    options = dict(key=key, path=path, alt=alt, font=font, **size)
+    if preview:
+        options['preview'] = 'true'
+    if share:
+        options['share'] = 'true'
+
     text = domain.Text(path)
     fontfile = app.font_service.find(font)
 
     template = app.template_service.find(key, allow_missing=True)
     if template.key != key:
-        return redirect(route('.get', key=template.key, path=path, alt=alt))
+        options['key'] = template.key
+        return redirect(route('.get', **options))
 
     if alt and template.path == template.get_path(alt):
-        return redirect(route('.get', key=key, path=path, font=font))
+        options.pop('alt')
+        return redirect(route('.get', **options))
 
     if font and not fontfile:
-        return redirect(route('.get', key=key, path=path, alt=alt))
+        options.pop('font')
+        return redirect(route('.get', **options))
 
     if path != text.path:
-        return redirect(route('.get', key=key, path=text.path, alt=alt))
+        options['path'] = text.path
+        return redirect(route('.get', **options))
 
-    image = app.image_service.create(template, text, style=alt, font=fontfile)
+    image = app.image_service.create(template, text,
+                                     style=alt, font=fontfile, size=size)
 
-    return display(image.text, image.path)
+    if not preview:
+        cache.add(key=key, path=path, style=alt, font=font)
+        track(image.text)
+
+    return display(image.text, image.path, share=share)
 
 
-@blueprint.route("<key>/<path:path>.jpeg")
+@blueprint.route("/<key>/<path:path>.jpeg")
 def get_with_text_jpeg(key, path):
     return redirect(route('.get', key=key, path=path))
 
 
-@blueprint.route("_<code>.jpg")
+@blueprint.route("/_<code>.jpg")
 def get_encoded(code):
 
     key, path = app.link_service.decode(code)
     template = app.template_service.find(key)
     text = domain.Text(path)
     image = app.image_service.create(template, text)
+
+    track(image.text)
 
     return display(image.text, image.path)
