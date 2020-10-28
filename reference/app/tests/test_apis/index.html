@@ -1,0 +1,1858 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../../../app/static/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.14">
+    
+    
+      
+        <title>Test Apis - memegen</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.d3202873.min.css">
+      
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ff0a5ce4.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#546d78">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue-grey" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#module-appteststest_apis" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../../.." title="memegen" class="md-header-nav__button md-logo" aria-label="memegen">
+      
+  <img src="../../../../app/static/favicon.ico" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            memegen
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Test Apis
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/kyluca/memegen/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    memegen
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="memegen" class="md-nav__button md-logo" aria-label="memegen">
+      
+  <img src="../../../../app/static/favicon.ico" alt="logo">
+
+    </a>
+    memegen
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/kyluca/memegen/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    memegen
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../CHANGELOG/" title="Changelog" class="md-nav__link">
+      Changelog
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../../CONTRIBUTING/" title="Contributing" class="md-nav__link">
+      Contributing
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Reference
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Reference" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        Reference
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1" checked>
+    
+    <label class="md-nav__link" for="nav-4-1">
+      App
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="App" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        <span class="md-nav__icon md-icon"></span>
+        App
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../errors/" title="Errors" class="md-nav__link">
+      Errors
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../helpers/" title="Helpers" class="md-nav__link">
+      Helpers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../models/" title="Models" class="md-nav__link">
+      Models
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../settings/" title="Settings" class="md-nav__link">
+      Settings
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../types/" title="Types" class="md-nav__link">
+      Types
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../views/" title="Views" class="md-nav__link">
+      Views
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1-8" type="checkbox" id="nav-4-1-8">
+    
+    <label class="md-nav__link" for="nav-4-1-8">
+      API
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="API" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-1-8">
+        <span class="md-nav__icon md-icon"></span>
+        API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/images/" title="Images" class="md-nav__link">
+      Images
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/shortcuts/" title="Shortcuts" class="md-nav__link">
+      Shortcuts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../api/templates/" title="Templates" class="md-nav__link">
+      Templates
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1-9" type="checkbox" id="nav-4-1-9" checked>
+    
+    <label class="md-nav__link" for="nav-4-1-9">
+      Tests
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Tests" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-1-9">
+        <span class="md-nav__icon md-icon"></span>
+        Tests
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../conftest/" title="Conftest" class="md-nav__link">
+      Conftest
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Test Apis
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" title="Test Apis" class="md-nav__link md-nav__link--active">
+      Test Apis
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#describe_image_detail" class="md-nav__link">
+    describe_image_detail
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#describe_image_list" class="md-nav__link">
+    describe_image_list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#describe_preview" class="md-nav__link">
+    describe_preview
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#describe_template_detail" class="md-nav__link">
+    describe_template_detail
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#describe_template_list" class="md-nav__link">
+    describe_template_list
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../test_docs/" title="Test Docs" class="md-nav__link">
+      Test Docs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../test_images/" title="Test Images" class="md-nav__link">
+      Test Images
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../test_models/" title="Test Models" class="md-nav__link">
+      Test Models
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../test_text/" title="Test Text" class="md-nav__link">
+      Test Text
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../test_views/" title="Test Views" class="md-nav__link">
+      Test Views
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1-10" type="checkbox" id="nav-4-1-10">
+    
+    <label class="md-nav__link" for="nav-4-1-10">
+      Utils
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Utils" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-1-10">
+        <span class="md-nav__icon md-icon"></span>
+        Utils
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../utils/html/" title="Html" class="md-nav__link">
+      Html
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../utils/images/" title="Images" class="md-nav__link">
+      Images
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../utils/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../utils/text/" title="Text" class="md-nav__link">
+      Text
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#functions" class="md-nav__link">
+    Functions
+  </a>
+  
+    <nav class="md-nav" aria-label="Functions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#describe_image_detail" class="md-nav__link">
+    describe_image_detail
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#describe_image_list" class="md-nav__link">
+    describe_image_list
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#describe_preview" class="md-nav__link">
+    describe_preview
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#describe_template_detail" class="md-nav__link">
+    describe_template_detail
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#describe_template_list" class="md-nav__link">
+    describe_template_list
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/kyluca/memegen/edit/master/reference/app/tests/test_apis.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                <h1 id="module-appteststest_apis">Module app.tests.test_apis</h1>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">json</span>
+
+<span class="kn">import</span> <span class="nn">pytest</span>
+
+<span class="k">def</span> <span class="nf">describe_template_list</span><span class="p">():</span>
+
+    <span class="k">def</span> <span class="nf">describe_GET</span><span class="p">():</span>
+
+        <span class="nd">@pytest.mark.slow</span>
+
+        <span class="k">def</span> <span class="nf">it_returns_all_templates</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span> <span class="n">client</span><span class="p">):</span>
+
+            <span class="n">request</span><span class="p">,</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/templates&quot;</span><span class="p">)</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="p">)</span> <span class="o">==</span> <span class="mi">200</span>
+
+<span class="k">def</span> <span class="nf">describe_template_detail</span><span class="p">():</span>
+
+    <span class="k">def</span> <span class="nf">describe_GET</span><span class="p">():</span>
+
+        <span class="k">def</span> <span class="nf">it_returns_sample_images</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span> <span class="n">client</span><span class="p">):</span>
+
+            <span class="n">request</span><span class="p">,</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/templates/iw&quot;</span><span class="p">)</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="p">)</span> <span class="o">==</span> <span class="mi">200</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">)</span> <span class="o">==</span> <span class="p">{</span>
+
+                <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Insanity Wolf&quot;</span><span class="p">,</span>
+
+                <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="s2">&quot;iw&quot;</span><span class="p">,</span>
+
+                <span class="s2">&quot;styles&quot;</span><span class="p">:</span> <span class="p">[],</span>
+
+                <span class="s2">&quot;blank&quot;</span><span class="p">:</span> <span class="s2">&quot;http://localhost:5000/images/iw.png&quot;</span><span class="p">,</span>
+
+                <span class="s2">&quot;sample&quot;</span><span class="p">:</span> <span class="s2">&quot;http://localhost:5000/images/iw/DOES_TESTING/IN_PRODUCTION.png&quot;</span><span class="p">,</span>
+
+                <span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="s2">&quot;http://knowyourmeme.com/memes/insanity-wolf&quot;</span><span class="p">,</span>
+
+                <span class="s2">&quot;_self&quot;</span><span class="p">:</span> <span class="s2">&quot;http://localhost:5000/templates/iw&quot;</span><span class="p">,</span>
+
+            <span class="p">}</span>
+
+        <span class="k">def</span> <span class="nf">it_returns_404_when_missing</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span> <span class="n">client</span><span class="p">):</span>
+
+            <span class="n">request</span><span class="p">,</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/templates/foobar&quot;</span><span class="p">)</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="p">)</span> <span class="o">==</span> <span class="mi">404</span>
+
+    <span class="k">def</span> <span class="nf">describe_POST</span><span class="p">():</span>
+
+        <span class="k">def</span> <span class="nf">it_returns_an_image_url</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span> <span class="n">client</span><span class="p">):</span>
+
+            <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;text_lines&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="s2">&quot;bar&quot;</span><span class="p">],</span> <span class="s2">&quot;extension&quot;</span><span class="p">:</span> <span class="s2">&quot;jpg&quot;</span><span class="p">}</span>
+
+            <span class="n">request</span><span class="p">,</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/templates/iw&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="p">)</span> <span class="o">==</span> <span class="mi">201</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">)</span> <span class="o">==</span> <span class="p">{</span>
+
+                <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://localhost:5000/images/iw/foo/bar.jpg&quot;</span>
+
+            <span class="p">}</span>
+
+        <span class="k">def</span> <span class="nf">it_supports_custom_backgrounds</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span> <span class="n">client</span><span class="p">):</span>
+
+            <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+
+                <span class="s2">&quot;image_url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://www.gstatic.com/webp/gallery/3.png&quot;</span><span class="p">,</span>
+
+                <span class="s2">&quot;text_lines&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="s2">&quot;bar&quot;</span><span class="p">],</span>
+
+                <span class="s2">&quot;extension&quot;</span><span class="p">:</span> <span class="s2">&quot;jpg&quot;</span><span class="p">,</span>
+
+            <span class="p">}</span>
+
+            <span class="n">request</span><span class="p">,</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/templates/custom&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="p">)</span> <span class="o">==</span> <span class="mi">201</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">)</span> <span class="o">==</span> <span class="p">{</span>
+
+                <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://localhost:5000/images/custom/foo/bar.jpg&quot;</span>
+
+                <span class="s2">&quot;?background=https://www.gstatic.com/webp/gallery/3.png&quot;</span>
+
+            <span class="p">}</span>
+
+        <span class="nd">@pytest.mark.parametrize</span><span class="p">(</span><span class="s2">&quot;key&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;fry&quot;</span><span class="p">,</span> <span class="s2">&quot;custom&quot;</span><span class="p">])</span>
+
+        <span class="k">def</span> <span class="nf">it_redirects_if_requested</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span> <span class="n">client</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+
+            <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;text_lines&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;abc&quot;</span><span class="p">],</span> <span class="s2">&quot;redirect&quot;</span><span class="p">:</span> <span class="bp">True</span><span class="p">}</span>
+
+            <span class="n">request</span><span class="p">,</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
+
+                <span class="n">f</span><span class="s2">&quot;/templates/{key}&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="n">allow_redirects</span><span class="o">=</span><span class="bp">False</span>
+
+            <span class="p">)</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="p">)</span> <span class="o">==</span> <span class="mi">302</span>
+
+<span class="k">def</span> <span class="nf">describe_image_list</span><span class="p">():</span>
+
+    <span class="k">def</span> <span class="nf">describe_GET</span><span class="p">():</span>
+
+        <span class="nd">@pytest.mark.slow</span>
+
+        <span class="k">def</span> <span class="nf">it_returns_sample_image_urls</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span> <span class="n">client</span><span class="p">):</span>
+
+            <span class="n">request</span><span class="p">,</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/images&quot;</span><span class="p">)</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="p">)</span> <span class="o">==</span> <span class="mi">200</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">)</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span>
+
+                <span class="p">{</span>
+
+                    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://localhost:5000/images/iw/DOES_TESTING/IN_PRODUCTION.png&quot;</span><span class="p">,</span>
+
+                    <span class="s2">&quot;template&quot;</span><span class="p">:</span> <span class="s2">&quot;http://localhost:5000/templates/iw&quot;</span><span class="p">,</span>
+
+                <span class="p">}</span>
+
+            <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">describe_POST</span><span class="p">():</span>
+
+        <span class="k">def</span> <span class="nf">it_returns_an_image_url</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span> <span class="n">client</span><span class="p">):</span>
+
+            <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;template_key&quot;</span><span class="p">:</span> <span class="s2">&quot;iw&quot;</span><span class="p">,</span> <span class="s2">&quot;text_lines&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="s2">&quot;bar&quot;</span><span class="p">]}</span>
+
+            <span class="n">request</span><span class="p">,</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/images&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="p">)</span> <span class="o">==</span> <span class="mi">201</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">)</span> <span class="o">==</span> <span class="p">{</span>
+
+                <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://localhost:5000/images/iw/foo/bar.png&quot;</span>
+
+            <span class="p">}</span>
+
+        <span class="k">def</span> <span class="nf">it_accepts_form_data</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span> <span class="n">client</span><span class="p">):</span>
+
+            <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;template_key&quot;</span><span class="p">:</span> <span class="s2">&quot;iw&quot;</span><span class="p">,</span> <span class="s2">&quot;text_lines[]&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="s2">&quot;bar&quot;</span><span class="p">]}</span>
+
+            <span class="n">request</span><span class="p">,</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/images&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+
+            <span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">)</span>
+
+            <span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="p">)</span> <span class="o">==</span> <span class="mi">201</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">)</span> <span class="o">==</span> <span class="p">{</span>
+
+                <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://localhost:5000/images/iw/foo/bar.png&quot;</span>
+
+            <span class="p">}</span>
+
+        <span class="k">def</span> <span class="nf">it_requires_template_key</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span> <span class="n">client</span><span class="p">):</span>
+
+            <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;text_lines&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="s2">&quot;bar&quot;</span><span class="p">]}</span>
+
+            <span class="n">request</span><span class="p">,</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/images&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="p">)</span> <span class="o">==</span> <span class="mi">400</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">)</span> <span class="o">==</span> <span class="p">{</span><span class="s2">&quot;error&quot;</span><span class="p">:</span> <span class="s1">&#39;&quot;template_key&quot; is required&#39;</span><span class="p">}</span>
+
+        <span class="k">def</span> <span class="nf">it_handles_missing_text_lines</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span> <span class="n">client</span><span class="p">):</span>
+
+            <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;template_key&quot;</span><span class="p">:</span> <span class="s2">&quot;iw&quot;</span><span class="p">}</span>
+
+            <span class="n">request</span><span class="p">,</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span><span class="s2">&quot;/images&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="p">)</span> <span class="o">==</span> <span class="mi">201</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">)</span> <span class="o">==</span> <span class="p">{</span><span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://localhost:5000/images/iw/_.png&quot;</span><span class="p">}</span>
+
+        <span class="k">def</span> <span class="nf">it_redirects_if_requested</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span> <span class="n">client</span><span class="p">):</span>
+
+            <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;template_key&quot;</span><span class="p">:</span> <span class="s2">&quot;iw&quot;</span><span class="p">,</span> <span class="s2">&quot;text_lines&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;abc&quot;</span><span class="p">],</span> <span class="s2">&quot;redirect&quot;</span><span class="p">:</span> <span class="bp">True</span><span class="p">}</span>
+
+            <span class="n">request</span><span class="p">,</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">post</span><span class="p">(</span>
+
+                <span class="s2">&quot;/images&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">data</span><span class="p">),</span> <span class="n">allow_redirects</span><span class="o">=</span><span class="bp">False</span>
+
+            <span class="p">)</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="p">)</span> <span class="o">==</span> <span class="mi">302</span>
+
+<span class="k">def</span> <span class="nf">describe_preview</span><span class="p">():</span>
+
+    <span class="k">def</span> <span class="nf">it_returns_an_image</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span> <span class="n">client</span><span class="p">):</span>
+
+        <span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;/images/preview.jpg&quot;</span>
+
+        <span class="n">request</span><span class="p">,</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+
+        <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="p">)</span> <span class="o">==</span> <span class="mi">200</span>
+
+        <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s2">&quot;content-type&quot;</span><span class="p">])</span> <span class="o">==</span> <span class="s2">&quot;image/jpeg&quot;</span>
+
+<span class="k">def</span> <span class="nf">describe_image_detail</span><span class="p">():</span>
+
+    <span class="nd">@pytest.mark.parametrize</span><span class="p">(</span>
+
+        <span class="p">(</span><span class="s2">&quot;path&quot;</span><span class="p">,</span> <span class="s2">&quot;content_type&quot;</span><span class="p">),</span>
+
+        <span class="p">[</span>
+
+            <span class="p">(</span><span class="s2">&quot;/images/fry/test.png&quot;</span><span class="p">,</span> <span class="s2">&quot;image/png&quot;</span><span class="p">),</span>
+
+            <span class="p">(</span><span class="s2">&quot;/images/fry/test.jpg&quot;</span><span class="p">,</span> <span class="s2">&quot;image/jpeg&quot;</span><span class="p">),</span>
+
+        <span class="p">],</span>
+
+    <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">it_returns_an_image</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span> <span class="n">client</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">content_type</span><span class="p">):</span>
+
+        <span class="n">request</span><span class="p">,</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+
+        <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="p">)</span> <span class="o">==</span> <span class="mi">200</span>
+
+        <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s2">&quot;content-type&quot;</span><span class="p">])</span> <span class="o">==</span> <span class="n">content_type</span>
+
+    <span class="nd">@pytest.mark.parametrize</span><span class="p">(</span>
+
+        <span class="p">(</span><span class="s2">&quot;path&quot;</span><span class="p">,</span> <span class="s2">&quot;content_type&quot;</span><span class="p">),</span>
+
+        <span class="p">[</span>
+
+            <span class="p">(</span><span class="s2">&quot;/images/fry.png&quot;</span><span class="p">,</span> <span class="s2">&quot;image/png&quot;</span><span class="p">),</span>
+
+            <span class="p">(</span><span class="s2">&quot;/images/fry.jpg&quot;</span><span class="p">,</span> <span class="s2">&quot;image/jpeg&quot;</span><span class="p">),</span>
+
+        <span class="p">],</span>
+
+    <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">it_returns_blank_templates_when_no_slug</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span> <span class="n">client</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">content_type</span><span class="p">):</span>
+
+        <span class="n">request</span><span class="p">,</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+
+        <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="p">)</span> <span class="o">==</span> <span class="mi">200</span>
+
+        <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s2">&quot;content-type&quot;</span><span class="p">])</span> <span class="o">==</span> <span class="n">content_type</span>
+
+    <span class="k">def</span> <span class="nf">it_handles_unknown_templates</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span> <span class="n">client</span><span class="p">):</span>
+
+        <span class="n">request</span><span class="p">,</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/images/unknown/test.png&quot;</span><span class="p">)</span>
+
+        <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="p">)</span> <span class="o">==</span> <span class="mi">404</span>
+
+        <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s2">&quot;content-type&quot;</span><span class="p">])</span> <span class="o">==</span> <span class="s2">&quot;image/png&quot;</span>
+
+    <span class="k">def</span> <span class="nf">it_rejects_extremely_long_urls</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span> <span class="n">client</span><span class="p">):</span>
+
+        <span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;test-&quot;</span> <span class="o">*</span> <span class="mi">50</span>
+
+        <span class="n">request</span><span class="p">,</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;/images/fry/{text}.jpg&quot;</span><span class="p">)</span>
+
+        <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="p">)</span> <span class="o">==</span> <span class="mi">414</span>
+
+        <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s2">&quot;content-type&quot;</span><span class="p">])</span> <span class="o">==</span> <span class="s2">&quot;image/jpeg&quot;</span>
+
+    <span class="k">def</span> <span class="nf">describe_styles</span><span class="p">():</span>
+
+        <span class="k">def</span> <span class="nf">it_supports_alternate_styles</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span> <span class="n">client</span><span class="p">):</span>
+
+            <span class="n">request</span><span class="p">,</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/images/ds/one/two.png?style=maga&quot;</span><span class="p">)</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="p">)</span> <span class="o">==</span> <span class="mi">200</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s2">&quot;content-type&quot;</span><span class="p">])</span> <span class="o">==</span> <span class="s2">&quot;image/png&quot;</span>
+
+        <span class="k">def</span> <span class="nf">it_rejects_invalid_styles</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span> <span class="n">client</span><span class="p">):</span>
+
+            <span class="n">request</span><span class="p">,</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/images/ds/one/two.png?style=foobar&quot;</span><span class="p">)</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="p">)</span> <span class="o">==</span> <span class="mi">422</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s2">&quot;content-type&quot;</span><span class="p">])</span> <span class="o">==</span> <span class="s2">&quot;image/png&quot;</span>
+
+    <span class="k">def</span> <span class="nf">describe_custom</span><span class="p">():</span>
+
+        <span class="nd">@pytest.mark.slow</span>
+
+        <span class="k">def</span> <span class="nf">it_supports_custom_templates</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span> <span class="n">client</span><span class="p">):</span>
+
+            <span class="n">request</span><span class="p">,</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+
+                <span class="s2">&quot;/images/custom/test.png&quot;</span>
+
+                <span class="s2">&quot;?background=https://www.gstatic.com/webp/gallery/3.jpg&quot;</span>
+
+            <span class="p">)</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="p">)</span> <span class="o">==</span> <span class="mi">200</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s2">&quot;content-type&quot;</span><span class="p">])</span> <span class="o">==</span> <span class="s2">&quot;image/png&quot;</span>
+
+        <span class="k">def</span> <span class="nf">it_requires_an_image_with_custom_templates</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span> <span class="n">client</span><span class="p">):</span>
+
+            <span class="n">request</span><span class="p">,</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/images/custom/test.png&quot;</span><span class="p">)</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="p">)</span> <span class="o">==</span> <span class="mi">422</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s2">&quot;content-type&quot;</span><span class="p">])</span> <span class="o">==</span> <span class="s2">&quot;image/png&quot;</span>
+
+        <span class="k">def</span> <span class="nf">it_handles_invalid_urls</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span> <span class="n">client</span><span class="p">):</span>
+
+            <span class="n">request</span><span class="p">,</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+
+                <span class="s2">&quot;/images/custom/test.png&quot;</span> <span class="s2">&quot;?background=foobar&quot;</span>
+
+            <span class="p">)</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="p">)</span> <span class="o">==</span> <span class="mi">415</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s2">&quot;content-type&quot;</span><span class="p">])</span> <span class="o">==</span> <span class="s2">&quot;image/png&quot;</span>
+
+        <span class="k">def</span> <span class="nf">it_handles_missing_urls</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span> <span class="n">client</span><span class="p">):</span>
+
+            <span class="n">request</span><span class="p">,</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+
+                <span class="s2">&quot;/images/custom/test.png&quot;</span>
+
+                <span class="s2">&quot;?background=http://example.com/does_not_exist.png&quot;</span>
+
+            <span class="p">)</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="p">)</span> <span class="o">==</span> <span class="mi">415</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s2">&quot;content-type&quot;</span><span class="p">])</span> <span class="o">==</span> <span class="s2">&quot;image/png&quot;</span>
+
+    <span class="k">def</span> <span class="nf">describe_redirects</span><span class="p">():</span>
+
+        <span class="nd">@pytest.mark.parametrize</span><span class="p">(</span><span class="s2">&quot;ext&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;png&quot;</span><span class="p">,</span> <span class="s2">&quot;jpg&quot;</span><span class="p">])</span>
+
+        <span class="k">def</span> <span class="nf">it_redirects_to_normalized_slug</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span> <span class="n">client</span><span class="p">,</span> <span class="n">ext</span><span class="p">):</span>
+
+            <span class="n">request</span><span class="p">,</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+
+                <span class="n">f</span><span class="s2">&quot;/images/fry/One Two.{ext}&quot;</span><span class="p">,</span> <span class="n">allow_redirects</span><span class="o">=</span><span class="bp">False</span>
+
+            <span class="p">)</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="p">)</span> <span class="o">==</span> <span class="mi">301</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s2">&quot;Location&quot;</span><span class="p">])</span> <span class="o">==</span> <span class="n">f</span><span class="s2">&quot;/images/fry/One_Two.{ext}&quot;</span>
+
+        <span class="nd">@pytest.mark.parametrize</span><span class="p">(</span><span class="s2">&quot;ext&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;png&quot;</span><span class="p">,</span> <span class="s2">&quot;jpg&quot;</span><span class="p">])</span>
+
+        <span class="k">def</span> <span class="nf">it_preserves_query_params_when_redirecting</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span> <span class="n">client</span><span class="p">,</span> <span class="n">ext</span><span class="p">):</span>
+
+            <span class="n">request</span><span class="p">,</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+
+                <span class="n">f</span><span class="s2">&quot;/images/custom/One Two.{ext}?alt=http://example.com&quot;</span><span class="p">,</span>
+
+                <span class="n">allow_redirects</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+
+            <span class="p">)</span>
+
+            <span class="n">redirect</span> <span class="o">=</span> <span class="n">f</span><span class="s2">&quot;/images/custom/One_Two.{ext}?alt=http://example.com&quot;</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="p">)</span> <span class="o">==</span> <span class="mi">301</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s2">&quot;Location&quot;</span><span class="p">])</span> <span class="o">==</span> <span class="n">redirect</span>
+
+        <span class="k">def</span> <span class="nf">it_handles_encoded_newlines</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span> <span class="n">client</span><span class="p">):</span>
+
+            <span class="n">request</span><span class="p">,</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+
+                <span class="s2">&quot;/images/fry/1 2%0A3.jpg&quot;</span><span class="p">,</span> <span class="n">allow_redirects</span><span class="o">=</span><span class="bp">False</span>
+
+            <span class="p">)</span>
+
+            <span class="n">redirect</span> <span class="o">=</span> <span class="s2">&quot;/images/fry/1_2~n3.jpg&quot;</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="p">)</span> <span class="o">==</span> <span class="mi">301</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s2">&quot;Location&quot;</span><span class="p">])</span> <span class="o">==</span> <span class="n">redirect</span>
+
+    <span class="k">def</span> <span class="nf">describe_shortcuts</span><span class="p">():</span>
+
+        <span class="k">def</span> <span class="nf">it_redirects_to_sample_image_when_no_extension</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span> <span class="n">client</span><span class="p">):</span>
+
+            <span class="n">request</span><span class="p">,</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/images/fry&quot;</span><span class="p">,</span> <span class="n">allow_redirects</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+
+            <span class="n">redirect</span> <span class="o">=</span> <span class="s2">&quot;/images/fry/NOT_SURE_IF_TROLLING/OR_JUST_STUPID&quot;</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="p">)</span> <span class="o">==</span> <span class="mi">302</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s2">&quot;Location&quot;</span><span class="p">])</span> <span class="o">==</span> <span class="n">redirect</span>
+
+        <span class="k">def</span> <span class="nf">it_redirects_to_custom_image_when_no_extension</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span> <span class="n">client</span><span class="p">):</span>
+
+            <span class="n">request</span><span class="p">,</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/images/fry/test&quot;</span><span class="p">,</span> <span class="n">allow_redirects</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="p">)</span> <span class="o">==</span> <span class="mi">302</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s2">&quot;Location&quot;</span><span class="p">])</span> <span class="o">==</span> <span class="s2">&quot;/images/fry/test.png&quot;</span>
+
+    <span class="k">def</span> <span class="nf">describe_legacy</span><span class="p">():</span>
+
+        <span class="nd">@pytest.mark.slow</span>
+
+        <span class="k">def</span> <span class="nf">it_accepts_alt_for_template</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span> <span class="n">client</span><span class="p">):</span>
+
+            <span class="n">request</span><span class="p">,</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span>
+
+                <span class="s2">&quot;/images/custom/test.png&quot;</span>
+
+                <span class="s2">&quot;?alt=https://www.gstatic.com/webp/gallery/3.jpg&quot;</span>
+
+            <span class="p">)</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="p">)</span> <span class="o">==</span> <span class="mi">200</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s2">&quot;content-type&quot;</span><span class="p">])</span> <span class="o">==</span> <span class="s2">&quot;image/png&quot;</span>
+
+        <span class="nd">@pytest.mark.slow</span>
+
+        <span class="k">def</span> <span class="nf">it_accepts_alt_for_style</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span> <span class="n">client</span><span class="p">):</span>
+
+            <span class="n">request</span><span class="p">,</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/images/sad-biden/test.png?style=scowl&quot;</span><span class="p">)</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="p">)</span> <span class="o">==</span> <span class="mi">200</span>
+
+            <span class="n">request</span><span class="p">,</span> <span class="n">response2</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;/images/sad-biden/test.png?alt=scowl&quot;</span><span class="p">)</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="p">)</span> <span class="o">==</span> <span class="mi">200</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">))</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">response2</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+
+        <span class="nd">@pytest.mark.parametrize</span><span class="p">(</span><span class="s2">&quot;ext&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;png&quot;</span><span class="p">,</span> <span class="s2">&quot;jpg&quot;</span><span class="p">])</span>
+
+        <span class="k">def</span> <span class="nf">it_redirects_to_sample_image</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span> <span class="n">client</span><span class="p">,</span> <span class="n">ext</span><span class="p">):</span>
+
+            <span class="n">request</span><span class="p">,</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;/fry.{ext}&quot;</span><span class="p">,</span> <span class="n">allow_redirects</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+
+            <span class="n">redirect</span> <span class="o">=</span> <span class="n">f</span><span class="s2">&quot;/images/fry/NOT_SURE_IF_TROLLING/OR_JUST_STUPID.{ext}&quot;</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="p">)</span> <span class="o">==</span> <span class="mi">302</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s2">&quot;Location&quot;</span><span class="p">])</span> <span class="o">==</span> <span class="n">redirect</span>
+
+        <span class="nd">@pytest.mark.parametrize</span><span class="p">(</span><span class="s2">&quot;ext&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;png&quot;</span><span class="p">,</span> <span class="s2">&quot;jpg&quot;</span><span class="p">])</span>
+
+        <span class="k">def</span> <span class="nf">it_redirects_to_custom_image</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span> <span class="n">client</span><span class="p">,</span> <span class="n">ext</span><span class="p">):</span>
+
+            <span class="n">request</span><span class="p">,</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;/fry/test.{ext}&quot;</span><span class="p">,</span> <span class="n">allow_redirects</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status</span><span class="p">)</span> <span class="o">==</span> <span class="mi">302</span>
+
+            <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s2">&quot;Location&quot;</span><span class="p">])</span> <span class="o">==</span> <span class="n">f</span><span class="s2">&quot;/images/fry/test.{ext}&quot;</span>
+</code></pre></div>
+
+
+</details>
+<h2 id="functions">Functions</h2>
+<h3 id="describe_image_detail">describe_image_detail</h3>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">describe_image_detail</span><span class="p">(</span>
+
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">def</span><span class="w"> </span><span class="n">describe_image_detail</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">    </span><span class="nv">@pytest</span><span class="p">.</span><span class="n">mark</span><span class="p">.</span><span class="n">parametrize</span><span class="p">(</span><span class="w"></span>
+
+<span class="w">        </span><span class="p">(</span><span class="ss">&quot;path&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;content_type&quot;</span><span class="p">),</span><span class="w"></span>
+
+<span class="w">        </span><span class="o">[</span><span class="n"></span>
+
+<span class="n">            (&quot;/images/fry/test.png&quot;, &quot;image/png&quot;),</span>
+
+<span class="n">            (&quot;/images/fry/test.jpg&quot;, &quot;image/jpeg&quot;),</span>
+
+<span class="n">        </span><span class="o">]</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">    </span><span class="p">)</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">it_returns_an_image</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span><span class="w"> </span><span class="n">client</span><span class="p">,</span><span class="w"> </span><span class="k">path</span><span class="p">,</span><span class="w"> </span><span class="n">content_type</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="k">path</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">status</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">200</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">headers</span><span class="o">[</span><span class="n">&quot;content-type&quot;</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">content_type</span><span class="w"></span>
+
+<span class="w">    </span><span class="nv">@pytest</span><span class="p">.</span><span class="n">mark</span><span class="p">.</span><span class="n">parametrize</span><span class="p">(</span><span class="w"></span>
+
+<span class="w">        </span><span class="p">(</span><span class="ss">&quot;path&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;content_type&quot;</span><span class="p">),</span><span class="w"></span>
+
+<span class="w">        </span><span class="o">[</span><span class="n"></span>
+
+<span class="n">            (&quot;/images/fry.png&quot;, &quot;image/png&quot;),</span>
+
+<span class="n">            (&quot;/images/fry.jpg&quot;, &quot;image/jpeg&quot;),</span>
+
+<span class="n">        </span><span class="o">]</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">    </span><span class="p">)</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">it_returns_blank_templates_when_no_slug</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span><span class="w"> </span><span class="n">client</span><span class="p">,</span><span class="w"> </span><span class="k">path</span><span class="p">,</span><span class="w"> </span><span class="n">content_type</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="k">path</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">status</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">200</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">headers</span><span class="o">[</span><span class="n">&quot;content-type&quot;</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">content_type</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">it_handles_unknown_templates</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span><span class="w"> </span><span class="n">client</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="ss">&quot;/images/unknown/test.png&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">status</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">404</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">headers</span><span class="o">[</span><span class="n">&quot;content-type&quot;</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;image/png&quot;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">it_rejects_extremely_long_urls</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span><span class="w"> </span><span class="n">client</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="nc">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;test-&quot;</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">50</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;/images/fry/{text}.jpg&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">status</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">414</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">headers</span><span class="o">[</span><span class="n">&quot;content-type&quot;</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;image/jpeg&quot;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">describe_styles</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">def</span><span class="w"> </span><span class="n">it_supports_alternate_styles</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span><span class="w"> </span><span class="n">client</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="ss">&quot;/images/ds/one/two.png?style=maga&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">status</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">200</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">headers</span><span class="o">[</span><span class="n">&quot;content-type&quot;</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;image/png&quot;</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">def</span><span class="w"> </span><span class="n">it_rejects_invalid_styles</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span><span class="w"> </span><span class="n">client</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="ss">&quot;/images/ds/one/two.png?style=foobar&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">status</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">422</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">headers</span><span class="o">[</span><span class="n">&quot;content-type&quot;</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;image/png&quot;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">describe_custom</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="nv">@pytest</span><span class="p">.</span><span class="n">mark</span><span class="p">.</span><span class="n">slow</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">def</span><span class="w"> </span><span class="n">it_supports_custom_templates</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span><span class="w"> </span><span class="n">client</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="w"></span>
+
+<span class="w">                </span><span class="ss">&quot;/images/custom/test.png&quot;</span><span class="w"></span>
+
+<span class="w">                </span><span class="ss">&quot;?background=https://www.gstatic.com/webp/gallery/3.jpg&quot;</span><span class="w"></span>
+
+<span class="w">            </span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">status</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">200</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">headers</span><span class="o">[</span><span class="n">&quot;content-type&quot;</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;image/png&quot;</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">def</span><span class="w"> </span><span class="n">it_requires_an_image_with_custom_templates</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span><span class="w"> </span><span class="n">client</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="ss">&quot;/images/custom/test.png&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">status</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">422</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">headers</span><span class="o">[</span><span class="n">&quot;content-type&quot;</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;image/png&quot;</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">def</span><span class="w"> </span><span class="n">it_handles_invalid_urls</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span><span class="w"> </span><span class="n">client</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="w"></span>
+
+<span class="w">                </span><span class="ss">&quot;/images/custom/test.png&quot;</span><span class="w"> </span><span class="ss">&quot;?background=foobar&quot;</span><span class="w"></span>
+
+<span class="w">            </span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">status</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">415</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">headers</span><span class="o">[</span><span class="n">&quot;content-type&quot;</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;image/png&quot;</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">def</span><span class="w"> </span><span class="n">it_handles_missing_urls</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span><span class="w"> </span><span class="n">client</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="w"></span>
+
+<span class="w">                </span><span class="ss">&quot;/images/custom/test.png&quot;</span><span class="w"></span>
+
+<span class="w">                </span><span class="ss">&quot;?background=http://example.com/does_not_exist.png&quot;</span><span class="w"></span>
+
+<span class="w">            </span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">status</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">415</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">headers</span><span class="o">[</span><span class="n">&quot;content-type&quot;</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;image/png&quot;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">describe_redirects</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="nv">@pytest</span><span class="p">.</span><span class="n">mark</span><span class="p">.</span><span class="n">parametrize</span><span class="p">(</span><span class="ss">&quot;ext&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">[</span><span class="n">&quot;png&quot;, &quot;jpg&quot;</span><span class="o">]</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">def</span><span class="w"> </span><span class="n">it_redirects_to_normalized_slug</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span><span class="w"> </span><span class="n">client</span><span class="p">,</span><span class="w"> </span><span class="n">ext</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">f</span><span class="ss">&quot;/images/fry/One Two.{ext}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">allow_redirects</span><span class="o">=</span><span class="k">False</span><span class="w"></span>
+
+<span class="w">            </span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">status</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">301</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">headers</span><span class="o">[</span><span class="n">&quot;Location&quot;</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">f</span><span class="ss">&quot;/images/fry/One_Two.{ext}&quot;</span><span class="w"></span>
+
+<span class="w">        </span><span class="nv">@pytest</span><span class="p">.</span><span class="n">mark</span><span class="p">.</span><span class="n">parametrize</span><span class="p">(</span><span class="ss">&quot;ext&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">[</span><span class="n">&quot;png&quot;, &quot;jpg&quot;</span><span class="o">]</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">def</span><span class="w"> </span><span class="n">it_preserves_query_params_when_redirecting</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span><span class="w"> </span><span class="n">client</span><span class="p">,</span><span class="w"> </span><span class="n">ext</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">f</span><span class="ss">&quot;/images/custom/One Two.{ext}?alt=http://example.com&quot;</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">allow_redirects</span><span class="o">=</span><span class="k">False</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">            </span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">redirect</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f</span><span class="ss">&quot;/images/custom/One_Two.{ext}?alt=http://example.com&quot;</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">status</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">301</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">headers</span><span class="o">[</span><span class="n">&quot;Location&quot;</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">redirect</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">def</span><span class="w"> </span><span class="n">it_handles_encoded_newlines</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span><span class="w"> </span><span class="n">client</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="w"></span>
+
+<span class="w">                </span><span class="ss">&quot;/images/fry/1 2%0A3.jpg&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">allow_redirects</span><span class="o">=</span><span class="k">False</span><span class="w"></span>
+
+<span class="w">            </span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">redirect</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;/images/fry/1_2~n3.jpg&quot;</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">status</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">301</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">headers</span><span class="o">[</span><span class="n">&quot;Location&quot;</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">redirect</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">describe_shortcuts</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">def</span><span class="w"> </span><span class="n">it_redirects_to_sample_image_when_no_extension</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span><span class="w"> </span><span class="n">client</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="ss">&quot;/images/fry&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">allow_redirects</span><span class="o">=</span><span class="k">False</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">redirect</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;/images/fry/NOT_SURE_IF_TROLLING/OR_JUST_STUPID&quot;</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">status</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">302</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">headers</span><span class="o">[</span><span class="n">&quot;Location&quot;</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">redirect</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">def</span><span class="w"> </span><span class="n">it_redirects_to_custom_image_when_no_extension</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span><span class="w"> </span><span class="n">client</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="ss">&quot;/images/fry/test&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">allow_redirects</span><span class="o">=</span><span class="k">False</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">status</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">302</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">headers</span><span class="o">[</span><span class="n">&quot;Location&quot;</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;/images/fry/test.png&quot;</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">describe_legacy</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="nv">@pytest</span><span class="p">.</span><span class="n">mark</span><span class="p">.</span><span class="n">slow</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">def</span><span class="w"> </span><span class="n">it_accepts_alt_for_template</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span><span class="w"> </span><span class="n">client</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="w"></span>
+
+<span class="w">                </span><span class="ss">&quot;/images/custom/test.png&quot;</span><span class="w"></span>
+
+<span class="w">                </span><span class="ss">&quot;?alt=https://www.gstatic.com/webp/gallery/3.jpg&quot;</span><span class="w"></span>
+
+<span class="w">            </span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">status</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">200</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">headers</span><span class="o">[</span><span class="n">&quot;content-type&quot;</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;image/png&quot;</span><span class="w"></span>
+
+<span class="w">        </span><span class="nv">@pytest</span><span class="p">.</span><span class="n">mark</span><span class="p">.</span><span class="n">slow</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">def</span><span class="w"> </span><span class="n">it_accepts_alt_for_style</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span><span class="w"> </span><span class="n">client</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="ss">&quot;/images/sad-biden/test.png?style=scowl&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">status</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">200</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">response2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="ss">&quot;/images/sad-biden/test.png?alt=scowl&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">status</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">200</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">content</span><span class="p">))</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nf">len</span><span class="p">(</span><span class="n">response2</span><span class="p">.</span><span class="n">content</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="nv">@pytest</span><span class="p">.</span><span class="n">mark</span><span class="p">.</span><span class="n">parametrize</span><span class="p">(</span><span class="ss">&quot;ext&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">[</span><span class="n">&quot;png&quot;, &quot;jpg&quot;</span><span class="o">]</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">def</span><span class="w"> </span><span class="n">it_redirects_to_sample_image</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span><span class="w"> </span><span class="n">client</span><span class="p">,</span><span class="w"> </span><span class="n">ext</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;/fry.{ext}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">allow_redirects</span><span class="o">=</span><span class="k">False</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">redirect</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f</span><span class="ss">&quot;/images/fry/NOT_SURE_IF_TROLLING/OR_JUST_STUPID.{ext}&quot;</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">status</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">302</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">headers</span><span class="o">[</span><span class="n">&quot;Location&quot;</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">redirect</span><span class="w"></span>
+
+<span class="w">        </span><span class="nv">@pytest</span><span class="p">.</span><span class="n">mark</span><span class="p">.</span><span class="n">parametrize</span><span class="p">(</span><span class="ss">&quot;ext&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">[</span><span class="n">&quot;png&quot;, &quot;jpg&quot;</span><span class="o">]</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">def</span><span class="w"> </span><span class="n">it_redirects_to_custom_image</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span><span class="w"> </span><span class="n">client</span><span class="p">,</span><span class="w"> </span><span class="n">ext</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;/fry/test.{ext}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">allow_redirects</span><span class="o">=</span><span class="k">False</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">status</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">302</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">headers</span><span class="o">[</span><span class="n">&quot;Location&quot;</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">f</span><span class="ss">&quot;/images/fry/test.{ext}&quot;</span><span class="w"></span>
+</code></pre></div>
+
+
+</details>
+<h3 id="describe_image_list">describe_image_list</h3>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">describe_image_list</span><span class="p">(</span>
+
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">def</span><span class="w"> </span><span class="n">describe_image_list</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">describe_GET</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="nv">@pytest</span><span class="p">.</span><span class="n">mark</span><span class="p">.</span><span class="n">slow</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">def</span><span class="w"> </span><span class="n">it_returns_sample_image_urls</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span><span class="w"> </span><span class="n">client</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="ss">&quot;/images&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">status</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">200</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">json</span><span class="p">).</span><span class="k">contains</span><span class="p">(</span><span class="w"></span>
+
+<span class="w">                </span><span class="err">{</span><span class="w"></span>
+
+<span class="w">                    </span><span class="ss">&quot;url&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;http://localhost:5000/images/iw/DOES_TESTING/IN_PRODUCTION.png&quot;</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">                    </span><span class="ss">&quot;template&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;http://localhost:5000/templates/iw&quot;</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">                </span><span class="err">}</span><span class="w"></span>
+
+<span class="w">            </span><span class="p">)</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">describe_POST</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">def</span><span class="w"> </span><span class="n">it_returns_an_image_url</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span><span class="w"> </span><span class="n">client</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{</span><span class="ss">&quot;template_key&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;iw&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;text_lines&quot;</span><span class="err">:</span><span class="w"> </span><span class="o">[</span><span class="n">&quot;foo&quot;, &quot;bar&quot;</span><span class="o">]</span><span class="err">}</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="n">post</span><span class="p">(</span><span class="ss">&quot;/images&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">data</span><span class="o">=</span><span class="n">json</span><span class="p">.</span><span class="n">dumps</span><span class="p">(</span><span class="k">data</span><span class="p">))</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">status</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">201</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">json</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="err">{</span><span class="w"></span>
+
+<span class="w">                </span><span class="ss">&quot;url&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;http://localhost:5000/images/iw/foo/bar.png&quot;</span><span class="w"></span>
+
+<span class="w">            </span><span class="err">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">def</span><span class="w"> </span><span class="n">it_accepts_form_data</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span><span class="w"> </span><span class="n">client</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{</span><span class="ss">&quot;template_key&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;iw&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;text_lines[]&quot;</span><span class="err">:</span><span class="w"> </span><span class="o">[</span><span class="n">&quot;foo&quot;, &quot;bar&quot;</span><span class="o">]</span><span class="err">}</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="n">post</span><span class="p">(</span><span class="ss">&quot;/images&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">data</span><span class="o">=</span><span class="k">data</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">json</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">print</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="nc">text</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">status</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">201</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">json</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="err">{</span><span class="w"></span>
+
+<span class="w">                </span><span class="ss">&quot;url&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;http://localhost:5000/images/iw/foo/bar.png&quot;</span><span class="w"></span>
+
+<span class="w">            </span><span class="err">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">def</span><span class="w"> </span><span class="n">it_requires_template_key</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span><span class="w"> </span><span class="n">client</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{</span><span class="ss">&quot;text_lines&quot;</span><span class="err">:</span><span class="w"> </span><span class="o">[</span><span class="n">&quot;foo&quot;, &quot;bar&quot;</span><span class="o">]</span><span class="err">}</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="n">post</span><span class="p">(</span><span class="ss">&quot;/images&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">data</span><span class="o">=</span><span class="n">json</span><span class="p">.</span><span class="n">dumps</span><span class="p">(</span><span class="k">data</span><span class="p">))</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">status</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">400</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">json</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="err">{</span><span class="ss">&quot;error&quot;</span><span class="err">:</span><span class="w"> </span><span class="s1">&#39;&quot;template_key&quot; is required&#39;</span><span class="err">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">def</span><span class="w"> </span><span class="n">it_handles_missing_text_lines</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span><span class="w"> </span><span class="n">client</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{</span><span class="ss">&quot;template_key&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;iw&quot;</span><span class="err">}</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="n">post</span><span class="p">(</span><span class="ss">&quot;/images&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">data</span><span class="o">=</span><span class="n">json</span><span class="p">.</span><span class="n">dumps</span><span class="p">(</span><span class="k">data</span><span class="p">))</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">status</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">201</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">json</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="err">{</span><span class="ss">&quot;url&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;http://localhost:5000/images/iw/_.png&quot;</span><span class="err">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">def</span><span class="w"> </span><span class="n">it_redirects_if_requested</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span><span class="w"> </span><span class="n">client</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{</span><span class="ss">&quot;template_key&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;iw&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;text_lines&quot;</span><span class="err">:</span><span class="w"> </span><span class="o">[</span><span class="n">&quot;abc&quot;</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;redirect&quot;</span><span class="err">:</span><span class="w"> </span><span class="k">True</span><span class="err">}</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="n">post</span><span class="p">(</span><span class="w"></span>
+
+<span class="w">                </span><span class="ss">&quot;/images&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">data</span><span class="o">=</span><span class="n">json</span><span class="p">.</span><span class="n">dumps</span><span class="p">(</span><span class="k">data</span><span class="p">),</span><span class="w"> </span><span class="n">allow_redirects</span><span class="o">=</span><span class="k">False</span><span class="w"></span>
+
+<span class="w">            </span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">status</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">302</span><span class="w"></span>
+</code></pre></div>
+
+
+</details>
+<h3 id="describe_preview">describe_preview</h3>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">describe_preview</span><span class="p">(</span>
+
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">def</span> <span class="n">describe_preview</span><span class="p">():</span>
+
+    <span class="n">def</span> <span class="n">it_returns_an_image</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span> <span class="n">client</span><span class="p">):</span>
+
+        <span class="n">path</span> <span class="o">=</span> <span class="ss">&quot;/images/preview.jpg&quot;</span>
+
+        <span class="n">request</span><span class="p">,</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+
+        <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">status</span><span class="p">)</span> <span class="o">==</span> <span class="mi">200</span>
+
+        <span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">headers</span><span class="p">[</span><span class="ss">&quot;content-type&quot;</span><span class="p">])</span> <span class="o">==</span> <span class="ss">&quot;image/jpeg&quot;</span>
+</code></pre></div>
+
+
+</details>
+<h3 id="describe_template_detail">describe_template_detail</h3>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">describe_template_detail</span><span class="p">(</span>
+
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">def</span><span class="w"> </span><span class="n">describe_template_detail</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">describe_GET</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">def</span><span class="w"> </span><span class="n">it_returns_sample_images</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span><span class="w"> </span><span class="n">client</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="ss">&quot;/templates/iw&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">status</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">200</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">json</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="err">{</span><span class="w"></span>
+
+<span class="w">                </span><span class="ss">&quot;name&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;Insanity Wolf&quot;</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">                </span><span class="ss">&quot;key&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;iw&quot;</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">                </span><span class="ss">&quot;styles&quot;</span><span class="err">:</span><span class="w"> </span><span class="err">[]</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">                </span><span class="ss">&quot;blank&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;http://localhost:5000/images/iw.png&quot;</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">                </span><span class="ss">&quot;sample&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;http://localhost:5000/images/iw/DOES_TESTING/IN_PRODUCTION.png&quot;</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">                </span><span class="ss">&quot;source&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;http://knowyourmeme.com/memes/insanity-wolf&quot;</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">                </span><span class="ss">&quot;_self&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;http://localhost:5000/templates/iw&quot;</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">            </span><span class="err">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">def</span><span class="w"> </span><span class="n">it_returns_404_when_missing</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span><span class="w"> </span><span class="n">client</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="ss">&quot;/templates/foobar&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">status</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">404</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">describe_POST</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">def</span><span class="w"> </span><span class="n">it_returns_an_image_url</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span><span class="w"> </span><span class="n">client</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{</span><span class="ss">&quot;text_lines&quot;</span><span class="err">:</span><span class="w"> </span><span class="o">[</span><span class="n">&quot;foo&quot;, &quot;bar&quot;</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;extension&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;jpg&quot;</span><span class="err">}</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="n">post</span><span class="p">(</span><span class="ss">&quot;/templates/iw&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">data</span><span class="o">=</span><span class="n">json</span><span class="p">.</span><span class="n">dumps</span><span class="p">(</span><span class="k">data</span><span class="p">))</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">status</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">201</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">json</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="err">{</span><span class="w"></span>
+
+<span class="w">                </span><span class="ss">&quot;url&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;http://localhost:5000/images/iw/foo/bar.jpg&quot;</span><span class="w"></span>
+
+<span class="w">            </span><span class="err">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">def</span><span class="w"> </span><span class="n">it_supports_custom_backgrounds</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span><span class="w"> </span><span class="n">client</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{</span><span class="w"></span>
+
+<span class="w">                </span><span class="ss">&quot;image_url&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;https://www.gstatic.com/webp/gallery/3.png&quot;</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">                </span><span class="ss">&quot;text_lines&quot;</span><span class="err">:</span><span class="w"> </span><span class="o">[</span><span class="n">&quot;foo&quot;, &quot;bar&quot;</span><span class="o">]</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">                </span><span class="ss">&quot;extension&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;jpg&quot;</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">            </span><span class="err">}</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="n">post</span><span class="p">(</span><span class="ss">&quot;/templates/custom&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">data</span><span class="o">=</span><span class="n">json</span><span class="p">.</span><span class="n">dumps</span><span class="p">(</span><span class="k">data</span><span class="p">))</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">status</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">201</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">json</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="err">{</span><span class="w"></span>
+
+<span class="w">                </span><span class="ss">&quot;url&quot;</span><span class="err">:</span><span class="w"> </span><span class="ss">&quot;http://localhost:5000/images/custom/foo/bar.jpg&quot;</span><span class="w"></span>
+
+<span class="w">                </span><span class="ss">&quot;?background=https://www.gstatic.com/webp/gallery/3.png&quot;</span><span class="w"></span>
+
+<span class="w">            </span><span class="err">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="nv">@pytest</span><span class="p">.</span><span class="n">mark</span><span class="p">.</span><span class="n">parametrize</span><span class="p">(</span><span class="ss">&quot;key&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">[</span><span class="n">&quot;fry&quot;, &quot;custom&quot;</span><span class="o">]</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">def</span><span class="w"> </span><span class="n">it_redirects_if_requested</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span><span class="w"> </span><span class="n">client</span><span class="p">,</span><span class="w"> </span><span class="k">key</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{</span><span class="ss">&quot;text_lines&quot;</span><span class="err">:</span><span class="w"> </span><span class="o">[</span><span class="n">&quot;abc&quot;</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;redirect&quot;</span><span class="err">:</span><span class="w"> </span><span class="k">True</span><span class="err">}</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="n">post</span><span class="p">(</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">f</span><span class="ss">&quot;/templates/{key}&quot;</span><span class="p">,</span><span class="w"> </span><span class="k">data</span><span class="o">=</span><span class="n">json</span><span class="p">.</span><span class="n">dumps</span><span class="p">(</span><span class="k">data</span><span class="p">),</span><span class="w"> </span><span class="n">allow_redirects</span><span class="o">=</span><span class="k">False</span><span class="w"></span>
+
+<span class="w">            </span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">status</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">302</span><span class="w"></span>
+</code></pre></div>
+
+
+</details>
+<h3 id="describe_template_list">describe_template_list</h3>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">describe_template_list</span><span class="p">(</span>
+
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">def</span><span class="w"> </span><span class="n">describe_template_list</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">describe_GET</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="nv">@pytest</span><span class="p">.</span><span class="n">mark</span><span class="p">.</span><span class="n">slow</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">def</span><span class="w"> </span><span class="n">it_returns_all_templates</span><span class="p">(</span><span class="n">expect</span><span class="p">,</span><span class="w"> </span><span class="n">client</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">response</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">client</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="ss">&quot;/templates&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">expect</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">status</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">200</span><span class="w"></span>
+</code></pre></div>
+
+
+</details>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../" title="Index" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Index
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../test_docs/" title="Test Docs" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Test Docs
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Powered by
+        <a href="http://timothycrosley.github.io/portray">portray.</a>
+        You too can
+        <a href="http://timothycrosley.github.io/portray">
+          portray</a>
+        your Python project well using automatic documentation.
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../../assets/javascripts/vendor.2d1db4bd.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.6627ddf3.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../../assets/javascripts/worker/search.5eca75d3.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

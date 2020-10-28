@@ -1,0 +1,1318 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../../app/static/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.14">
+    
+    
+      
+        <title>Errors - memegen</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.d3202873.min.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ff0a5ce4.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#546d78">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue-grey" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#module-apperrors" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../.." title="memegen" class="md-header-nav__button md-logo" aria-label="memegen">
+      
+  <img src="../../../app/static/favicon.ico" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            memegen
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Errors
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/kyluca/memegen/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    memegen
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="memegen" class="md-nav__button md-logo" aria-label="memegen">
+      
+  <img src="../../../app/static/favicon.ico" alt="logo">
+
+    </a>
+    memegen
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/kyluca/memegen/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    memegen
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../CHANGELOG/" title="Changelog" class="md-nav__link">
+      Changelog
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../CONTRIBUTING/" title="Contributing" class="md-nav__link">
+      Contributing
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Reference
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Reference" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        Reference
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1" checked>
+    
+    <label class="md-nav__link" for="nav-4-1">
+      App
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="App" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        <span class="md-nav__icon md-icon"></span>
+        App
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Errors
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" title="Errors" class="md-nav__link md-nav__link--active">
+      Errors
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    Classes
+  </a>
+  
+    <nav class="md-nav" aria-label="Classes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bugsnagerrorhandler" class="md-nav__link">
+    BugsnagErrorHandler
+  </a>
+  
+    <nav class="md-nav" aria-label="BugsnagErrorHandler">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ancestors-in-mro" class="md-nav__link">
+    Ancestors (in MRO)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-variables" class="md-nav__link">
+    Class variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add" class="md-nav__link">
+    add
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default" class="md-nav__link">
+    default
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log" class="md-nav__link">
+    log
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lookup" class="md-nav__link">
+    lookup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    response
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../helpers/" title="Helpers" class="md-nav__link">
+      Helpers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../models/" title="Models" class="md-nav__link">
+      Models
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../settings/" title="Settings" class="md-nav__link">
+      Settings
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../types/" title="Types" class="md-nav__link">
+      Types
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../views/" title="Views" class="md-nav__link">
+      Views
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1-8" type="checkbox" id="nav-4-1-8">
+    
+    <label class="md-nav__link" for="nav-4-1-8">
+      API
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="API" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-1-8">
+        <span class="md-nav__icon md-icon"></span>
+        API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/images/" title="Images" class="md-nav__link">
+      Images
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/shortcuts/" title="Shortcuts" class="md-nav__link">
+      Shortcuts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/templates/" title="Templates" class="md-nav__link">
+      Templates
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1-9" type="checkbox" id="nav-4-1-9">
+    
+    <label class="md-nav__link" for="nav-4-1-9">
+      Tests
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Tests" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-1-9">
+        <span class="md-nav__icon md-icon"></span>
+        Tests
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tests/conftest/" title="Conftest" class="md-nav__link">
+      Conftest
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tests/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tests/test_apis/" title="Test Apis" class="md-nav__link">
+      Test Apis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tests/test_docs/" title="Test Docs" class="md-nav__link">
+      Test Docs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tests/test_images/" title="Test Images" class="md-nav__link">
+      Test Images
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tests/test_models/" title="Test Models" class="md-nav__link">
+      Test Models
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tests/test_text/" title="Test Text" class="md-nav__link">
+      Test Text
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tests/test_views/" title="Test Views" class="md-nav__link">
+      Test Views
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1-10" type="checkbox" id="nav-4-1-10">
+    
+    <label class="md-nav__link" for="nav-4-1-10">
+      Utils
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Utils" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-1-10">
+        <span class="md-nav__icon md-icon"></span>
+        Utils
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../utils/html/" title="Html" class="md-nav__link">
+      Html
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../utils/images/" title="Images" class="md-nav__link">
+      Images
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../utils/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../utils/text/" title="Text" class="md-nav__link">
+      Text
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#variables" class="md-nav__link">
+    Variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    Classes
+  </a>
+  
+    <nav class="md-nav" aria-label="Classes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bugsnagerrorhandler" class="md-nav__link">
+    BugsnagErrorHandler
+  </a>
+  
+    <nav class="md-nav" aria-label="BugsnagErrorHandler">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ancestors-in-mro" class="md-nav__link">
+    Ancestors (in MRO)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#class-variables" class="md-nav__link">
+    Class variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add" class="md-nav__link">
+    add
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default" class="md-nav__link">
+    default
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#log" class="md-nav__link">
+    log
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lookup" class="md-nav__link">
+    lookup
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    response
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/kyluca/memegen/edit/master/reference/app/errors.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                <h1 id="module-apperrors">Module app.errors</h1>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">bugsnag</span>
+
+<span class="kn">from</span> <span class="nn">aiohttp.client_exceptions</span> <span class="kn">import</span> <span class="n">ClientPayloadError</span>
+
+<span class="kn">from</span> <span class="nn">sanic.exceptions</span> <span class="kn">import</span> <span class="n">MethodNotSupported</span><span class="p">,</span> <span class="n">NotFound</span>
+
+<span class="kn">from</span> <span class="nn">sanic.handlers</span> <span class="kn">import</span> <span class="n">ErrorHandler</span>
+
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">settings</span>
+
+<span class="n">IGNORED_EXCEPTIONS</span> <span class="o">=</span> <span class="p">(</span><span class="n">NotFound</span><span class="p">,</span> <span class="n">MethodNotSupported</span><span class="p">,</span> <span class="n">ClientPayloadError</span><span class="p">)</span>
+
+<span class="n">bugsnag</span><span class="o">.</span><span class="n">configure</span><span class="p">(</span>
+
+    <span class="n">api_key</span><span class="o">=</span><span class="n">settings</span><span class="o">.</span><span class="n">BUGSNAG_API_KEY</span><span class="p">,</span>
+
+    <span class="n">project_root</span><span class="o">=</span><span class="s2">&quot;/app&quot;</span><span class="p">,</span>
+
+    <span class="n">release_stage</span><span class="o">=</span><span class="n">settings</span><span class="o">.</span><span class="n">RELEASE_STAGE</span><span class="p">,</span>
+
+<span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">BugsnagErrorHandler</span><span class="p">(</span><span class="n">ErrorHandler</span><span class="p">):</span>  <span class="c1"># pragma: no cover</span>
+
+    <span class="k">def</span> <span class="nf">default</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">exception</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_should_report</span><span class="p">(</span><span class="n">exception</span><span class="p">):</span>
+
+            <span class="n">bugsnag</span><span class="o">.</span><span class="n">notify</span><span class="p">(</span><span class="n">exception</span><span class="p">,</span> <span class="n">meta_data</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;request&quot;</span><span class="p">:</span> <span class="n">request</span><span class="o">.</span><span class="n">url</span><span class="p">})</span>
+
+        <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">default</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">exception</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_should_report</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">exception</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">settings</span><span class="o">.</span><span class="n">BUGSNAG_API_KEY</span><span class="p">:</span>
+
+            <span class="k">return</span> <span class="bp">False</span>
+
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">exception</span><span class="p">,</span> <span class="n">IGNORED_EXCEPTIONS</span><span class="p">):</span>
+
+            <span class="k">return</span> <span class="bp">False</span>
+
+        <span class="k">return</span> <span class="bp">True</span>
+</code></pre></div>
+
+
+</details>
+<h2 id="variables">Variables</h2>
+<div class="codehilite"><pre><span></span><code><span class="n">IGNORED_EXCEPTIONS</span>
+</code></pre></div>
+
+
+<h2 id="classes">Classes</h2>
+<h3 id="bugsnagerrorhandler">BugsnagErrorHandler</h3>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">BugsnagErrorHandler</span><span class="p">(</span>
+
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p>Provide :class:<code>sanic.app.Sanic</code> application with a mechanism to handle
+and process any and all uncaught exceptions in a way the application
+developer will set fit.</p>
+<p>This error handling framework is built into the core that can be extended
+by the developers to perform a wide range of tasks from recording the error
+stats to reporting them to an external service that can be used for
+realtime alerting system.</p>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="n">BugsnagErrorHandler</span>(<span class="n">ErrorHandler</span>):  <span class="c1"># pragma: no cover</span>
+
+    <span class="n">def</span> <span class="k">default</span>(<span class="nb">self</span>, <span class="n">request</span>, <span class="nb">exception</span>):
+
+        <span class="k">if</span> <span class="nb">self</span>.<span class="n">_should_report</span>(<span class="nb">exception</span>):
+
+            <span class="n">bugsnag</span>.<span class="n">notify</span>(<span class="nb">exception</span>, <span class="n">meta_data</span>={<span class="s">&quot;request&quot;</span>: <span class="n">request</span>.<span class="n">url</span>})
+
+        <span class="k">return</span> <span class="n">super</span>().<span class="k">default</span>(<span class="n">request</span>, <span class="nb">exception</span>)
+
+    <span class="n">def</span> <span class="n">_should_report</span>(<span class="nb">self</span>, <span class="nb">exception</span>) -&gt; <span class="n">bool:</span>
+
+        <span class="k">if</span> <span class="nb">not</span> <span class="n">settings</span>.<span class="n">BUGSNAG_API_KEY:</span>
+
+            <span class="k">return</span> <span class="nb">False</span>
+
+        <span class="k">if</span> <span class="n">isinstance</span>(<span class="nb">exception</span>, <span class="n">IGNORED_EXCEPTIONS</span>):
+
+            <span class="k">return</span> <span class="nb">False</span>
+
+        <span class="k">return</span> <span class="nb">True</span>
+</code></pre></div>
+
+
+</details>
+<hr />
+<h4 id="ancestors-in-mro">Ancestors (in MRO)</h4>
+<ul>
+<li>sanic.handlers.ErrorHandler</li>
+</ul>
+<h4 id="class-variables">Class variables</h4>
+<div class="codehilite"><pre><span></span><code><span class="n">cached_handlers</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">handlers</span>
+</code></pre></div>
+
+
+<h4 id="methods">Methods</h4>
+<h5 id="add">add</h5>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">add</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">exception</span><span class="p">,</span>
+    <span class="n">handler</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p>Add a new exception handler to an already existing handler object.</p>
+<p>:param exception: Type of exception that need to be handled
+:param handler: Reference to the method that will handle the exception</p>
+<p>:type exception: :class:<code>sanic.exceptions.SanicException</code> or
+    :class:<code>Exception</code>
+:type handler: <code>function</code></p>
+<p>:return: None</p>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="k">add</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">exception</span><span class="p">,</span> <span class="k">handler</span><span class="p">)</span><span class="o">:</span>
+
+        <span class="s2">&quot;</span><span class="se">&quot;&quot;</span><span class="s2"></span>
+
+<span class="s2">        Add a new exception handler to an already existing handler object.</span>
+
+<span class="s2">        :param exception: Type of exception that need to be handled</span>
+
+<span class="s2">        :param handler: Reference to the method that will handle the exception</span>
+
+<span class="s2">        :type exception: :class:`sanic.exceptions.SanicException` or</span>
+
+<span class="s2">            :class:`Exception`</span>
+
+<span class="s2">        :type handler: ``function``</span>
+
+<span class="s2">        :return: None</span>
+
+<span class="s2">        </span><span class="se">&quot;&quot;</span><span class="s2">&quot;</span>
+
+        <span class="n">self</span><span class="p">.</span><span class="n">handlers</span><span class="p">.</span><span class="n">append</span><span class="p">((</span><span class="n">exception</span><span class="p">,</span> <span class="k">handler</span><span class="p">))</span>
+</code></pre></div>
+
+
+</details>
+<h5 id="default">default</h5>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">default</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">request</span><span class="p">,</span>
+    <span class="n">exception</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p>Provide a default behavior for the objects of :class:<code>ErrorHandler</code>.
+If a developer chooses to extent the :class:<code>ErrorHandler</code> they can
+provide a custom implementation for this method to behave in a way
+they see fit.</p>
+<p>:param request: Incoming request
+:param exception: Exception object</p>
+<p>:type request: :class:<code>sanic.request.Request</code>
+:type exception: :class:<code>sanic.exceptions.SanicException</code> or
+    :class:<code>Exception</code>
+:return:</p>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="k">default</span><span class="p">(</span><span class="k">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="k">exception</span><span class="p">):</span>
+
+        <span class="k">if</span> <span class="k">self</span><span class="p">.</span><span class="n">_should_report</span><span class="p">(</span><span class="k">exception</span><span class="p">):</span>
+
+            <span class="n">bugsnag</span><span class="p">.</span><span class="k">notify</span><span class="p">(</span><span class="k">exception</span><span class="p">,</span> <span class="n">meta_data</span><span class="o">=</span><span class="err">{</span><span class="ss">&quot;request&quot;</span><span class="p">:</span> <span class="n">request</span><span class="p">.</span><span class="n">url</span><span class="err">}</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">super</span><span class="p">().</span><span class="k">default</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="k">exception</span><span class="p">)</span>
+</code></pre></div>
+
+
+</details>
+<h5 id="log">log</h5>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">log</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">message</span><span class="p">,</span>
+    <span class="n">level</span><span class="o">=</span><span class="s1">&#39;error&#39;</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p>Deprecated, do not use.</p>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="n">log</span><span class="p">(</span><span class="k">self</span><span class="p">,</span> <span class="n">message</span><span class="p">,</span> <span class="k">level</span><span class="o">=</span><span class="ss">&quot;error&quot;</span><span class="p">):</span>
+
+        <span class="ss">&quot;&quot;&quot;</span>
+
+<span class="ss">        Deprecated, do not use.</span>
+
+<span class="ss">        &quot;&quot;&quot;</span>
+</code></pre></div>
+
+
+</details>
+<h5 id="lookup">lookup</h5>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">lookup</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">exception</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p>Lookup the existing instance of :class:<code>ErrorHandler</code> and fetch the
+registered handler for a specific type of exception.</p>
+<p>This method leverages a dict lookup to speedup the retrieval process.</p>
+<p>:param exception: Type of exception</p>
+<p>:type exception: :class:<code>sanic.exceptions.SanicException</code> or
+    :class:<code>Exception</code></p>
+<p>:return: Registered function if found <code>None</code> otherwise</p>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="n">lookup</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">exception</span><span class="p">)</span><span class="o">:</span>
+
+        <span class="s2">&quot;</span><span class="se">&quot;&quot;</span><span class="s2"></span>
+
+<span class="s2">        Lookup the existing instance of :class:`ErrorHandler` and fetch the</span>
+
+<span class="s2">        registered handler for a specific type of exception.</span>
+
+<span class="s2">        This method leverages a dict lookup to speedup the retrieval process.</span>
+
+<span class="s2">        :param exception: Type of exception</span>
+
+<span class="s2">        :type exception: :class:`sanic.exceptions.SanicException` or</span>
+
+<span class="s2">            :class:`Exception`</span>
+
+<span class="s2">        :return: Registered function if found ``None`` otherwise</span>
+
+<span class="s2">        </span><span class="se">&quot;&quot;</span><span class="s2">&quot;</span>
+
+        <span class="k">handler</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">cached_handlers</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="k">type</span><span class="p">(</span><span class="n">exception</span><span class="p">),</span> <span class="n">self</span><span class="p">.</span><span class="n">_missing</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="k">handler</span> <span class="k">is</span> <span class="n">self</span><span class="p">.</span><span class="n">_missing</span><span class="o">:</span>
+
+            <span class="k">for</span> <span class="n">exception_class</span><span class="p">,</span> <span class="k">handler</span> <span class="k">in</span> <span class="n">self</span><span class="p">.</span><span class="n">handlers</span><span class="o">:</span>
+
+                <span class="k">if</span> <span class="n">isinstance</span><span class="p">(</span><span class="n">exception</span><span class="p">,</span> <span class="n">exception_class</span><span class="p">)</span><span class="o">:</span>
+
+                    <span class="n">self</span><span class="p">.</span><span class="n">cached_handlers</span><span class="err">[</span><span class="k">type</span><span class="p">(</span><span class="n">exception</span><span class="p">)</span><span class="err">]</span> <span class="o">=</span> <span class="k">handler</span>
+
+                    <span class="k">return</span> <span class="k">handler</span>
+
+            <span class="n">self</span><span class="p">.</span><span class="n">cached_handlers</span><span class="err">[</span><span class="k">type</span><span class="p">(</span><span class="n">exception</span><span class="p">)</span><span class="err">]</span> <span class="o">=</span> <span class="k">None</span>
+
+            <span class="k">handler</span> <span class="o">=</span> <span class="k">None</span>
+
+        <span class="k">return</span> <span class="k">handler</span>
+</code></pre></div>
+
+
+</details>
+<h5 id="response">response</h5>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">response</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">request</span><span class="p">,</span>
+    <span class="n">exception</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p>Fetches and executes an exception handler and returns a response
+object</p>
+<p>:param request: Instance of :class:<code>sanic.request.Request</code>
+:param exception: Exception to handle</p>
+<p>:type request: :class:<code>sanic.request.Request</code>
+:type exception: :class:<code>sanic.exceptions.SanicException</code> or
+    :class:<code>Exception</code></p>
+<p>:return: Wrap the return value obtained from :func:<code>default</code>
+    or registered handler for that type of exception.</p>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="n">response</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">request</span><span class="p">,</span> <span class="n">exception</span><span class="p">)</span><span class="o">:</span>
+
+        <span class="s2">&quot;</span><span class="se">&quot;&quot;</span><span class="s2">Fetches and executes an exception handler and returns a response</span>
+
+<span class="s2">        object</span>
+
+<span class="s2">        :param request: Instance of :class:`sanic.request.Request`</span>
+
+<span class="s2">        :param exception: Exception to handle</span>
+
+<span class="s2">        :type request: :class:`sanic.request.Request`</span>
+
+<span class="s2">        :type exception: :class:`sanic.exceptions.SanicException` or</span>
+
+<span class="s2">            :class:`Exception`</span>
+
+<span class="s2">        :return: Wrap the return value obtained from :func:`default`</span>
+
+<span class="s2">            or registered handler for that type of exception.</span>
+
+<span class="s2">        </span><span class="se">&quot;&quot;</span><span class="s2">&quot;</span>
+
+        <span class="k">handler</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="n">lookup</span><span class="p">(</span><span class="n">exception</span><span class="p">)</span>
+
+        <span class="n">response</span> <span class="o">=</span> <span class="k">None</span>
+
+        <span class="n">try</span><span class="o">:</span>
+
+            <span class="k">if</span> <span class="k">handler</span><span class="o">:</span>
+
+                <span class="n">response</span> <span class="o">=</span> <span class="k">handler</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">exception</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">response</span> <span class="k">is</span> <span class="k">None</span><span class="o">:</span>
+
+                <span class="n">response</span> <span class="o">=</span> <span class="n">self</span><span class="p">.</span><span class="k">default</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">exception</span><span class="p">)</span>
+
+        <span class="k">except</span> <span class="n">Exception</span><span class="o">:</span>
+
+            <span class="n">self</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="n">format_exc</span><span class="p">())</span>
+
+            <span class="n">try</span><span class="o">:</span>
+
+                <span class="n">url</span> <span class="o">=</span> <span class="n">repr</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="n">url</span><span class="p">)</span>
+
+            <span class="k">except</span> <span class="n">AttributeError</span><span class="o">:</span>
+
+                <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;unknown&quot;</span>
+
+            <span class="n">response_message</span> <span class="o">=</span> <span class="p">(</span>
+
+                <span class="s2">&quot;Exception raised in exception handler &quot;</span> <span class="s1">&#39;&quot;%s&quot; for uri: %s&#39;</span>
+
+            <span class="p">)</span>
+
+            <span class="n">logger</span><span class="p">.</span><span class="n">exception</span><span class="p">(</span><span class="n">response_message</span><span class="p">,</span> <span class="k">handler</span><span class="p">.</span><span class="n">__name__</span><span class="p">,</span> <span class="n">url</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="n">self</span><span class="p">.</span><span class="n">debug</span><span class="o">:</span>
+
+                <span class="k">return</span> <span class="kt">text</span><span class="p">(</span><span class="n">response_message</span> <span class="o">%</span> <span class="p">(</span><span class="k">handler</span><span class="p">.</span><span class="n">__name__</span><span class="p">,</span> <span class="n">url</span><span class="p">),</span> <span class="mi">500</span><span class="p">)</span>
+
+            <span class="k">else</span><span class="o">:</span>
+
+                <span class="k">return</span> <span class="kt">text</span><span class="p">(</span><span class="s2">&quot;An error occurred while handling an error&quot;</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">response</span>
+</code></pre></div>
+
+
+</details>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../../../CONTRIBUTING/" title="Contributing" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Contributing
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../helpers/" title="Helpers" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Helpers
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Powered by
+        <a href="http://timothycrosley.github.io/portray">portray.</a>
+        You too can
+        <a href="http://timothycrosley.github.io/portray">
+          portray</a>
+        your Python project well using automatic documentation.
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/vendor.2d1db4bd.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.6627ddf3.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.5eca75d3.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1015 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="app/static/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.14">
+    
+    
+      
+        <title>memegen</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.d3202873.min.css">
+      
+        <link rel="stylesheet" href="assets/stylesheets/palette.ff0a5ce4.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#546d78">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue-grey" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#memegenlink" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="." title="memegen" class="md-header-nav__button md-logo" aria-label="memegen">
+      
+  <img src="app/static/favicon.ico" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            memegen
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Home
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/kyluca/memegen/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    memegen
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="memegen" class="md-nav__button md-logo" aria-label="memegen">
+      
+  <img src="app/static/favicon.ico" alt="logo">
+
+    </a>
+    memegen
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/kyluca/memegen/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    memegen
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Home
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="." title="Home" class="md-nav__link md-nav__link--active">
+      Home
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#generating-images" class="md-nav__link">
+    Generating Images
+  </a>
+  
+    <nav class="md-nav" aria-label="Generating Images">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#special-characters" class="md-nav__link">
+    Special Characters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alternate-styles" class="md-nav__link">
+    Alternate Styles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-backgrounds" class="md-nav__link">
+    Custom Backgrounds
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-sizing" class="md-nav__link">
+    Image Sizing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#live-previews" class="md-nav__link">
+    Live Previews
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-documentation" class="md-nav__link">
+    API Documentation
+  </a>
+  
+    <nav class="md-nav" aria-label="API Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sample-clients" class="md-nav__link">
+    Sample Clients
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="CHANGELOG/" title="Changelog" class="md-nav__link">
+      Changelog
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="CONTRIBUTING/" title="Contributing" class="md-nav__link">
+      Contributing
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Reference
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Reference" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        Reference
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1">
+    
+    <label class="md-nav__link" for="nav-4-1">
+      App
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="App" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        <span class="md-nav__icon md-icon"></span>
+        App
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="reference/app/errors/" title="Errors" class="md-nav__link">
+      Errors
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="reference/app/helpers/" title="Helpers" class="md-nav__link">
+      Helpers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="reference/app/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="reference/app/models/" title="Models" class="md-nav__link">
+      Models
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="reference/app/settings/" title="Settings" class="md-nav__link">
+      Settings
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="reference/app/types/" title="Types" class="md-nav__link">
+      Types
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="reference/app/views/" title="Views" class="md-nav__link">
+      Views
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1-8" type="checkbox" id="nav-4-1-8">
+    
+    <label class="md-nav__link" for="nav-4-1-8">
+      API
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="API" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-1-8">
+        <span class="md-nav__icon md-icon"></span>
+        API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="reference/app/api/images/" title="Images" class="md-nav__link">
+      Images
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="reference/app/api/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="reference/app/api/shortcuts/" title="Shortcuts" class="md-nav__link">
+      Shortcuts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="reference/app/api/templates/" title="Templates" class="md-nav__link">
+      Templates
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1-9" type="checkbox" id="nav-4-1-9">
+    
+    <label class="md-nav__link" for="nav-4-1-9">
+      Tests
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Tests" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-1-9">
+        <span class="md-nav__icon md-icon"></span>
+        Tests
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="reference/app/tests/conftest/" title="Conftest" class="md-nav__link">
+      Conftest
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="reference/app/tests/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="reference/app/tests/test_apis/" title="Test Apis" class="md-nav__link">
+      Test Apis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="reference/app/tests/test_docs/" title="Test Docs" class="md-nav__link">
+      Test Docs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="reference/app/tests/test_images/" title="Test Images" class="md-nav__link">
+      Test Images
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="reference/app/tests/test_models/" title="Test Models" class="md-nav__link">
+      Test Models
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="reference/app/tests/test_text/" title="Test Text" class="md-nav__link">
+      Test Text
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="reference/app/tests/test_views/" title="Test Views" class="md-nav__link">
+      Test Views
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1-10" type="checkbox" id="nav-4-1-10">
+    
+    <label class="md-nav__link" for="nav-4-1-10">
+      Utils
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Utils" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-1-10">
+        <span class="md-nav__icon md-icon"></span>
+        Utils
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="reference/app/utils/html/" title="Html" class="md-nav__link">
+      Html
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="reference/app/utils/images/" title="Images" class="md-nav__link">
+      Images
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="reference/app/utils/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="reference/app/utils/text/" title="Text" class="md-nav__link">
+      Text
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#generating-images" class="md-nav__link">
+    Generating Images
+  </a>
+  
+    <nav class="md-nav" aria-label="Generating Images">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#special-characters" class="md-nav__link">
+    Special Characters
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alternate-styles" class="md-nav__link">
+    Alternate Styles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-backgrounds" class="md-nav__link">
+    Custom Backgrounds
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-sizing" class="md-nav__link">
+    Image Sizing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#live-previews" class="md-nav__link">
+    Live Previews
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-documentation" class="md-nav__link">
+    API Documentation
+  </a>
+  
+    <nav class="md-nav" aria-label="API Documentation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sample-clients" class="md-nav__link">
+    Sample Clients
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/kyluca/memegen/edit/master/README.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                <h1 id="memegenlink">memegen.link</h1>
+<p>An API to programatically generate memes based solely on requested URLs.</p>
+<p><a href="https://circleci.com/gh/jacebrowning/memegen"><img alt="Build Status" src="https://img.shields.io/circleci/build/github/jacebrowning/memegen" /></a>
+<a href="https://coveralls.io/r/jacebrowning/memegen"><img alt="Coverage Status" src="http://img.shields.io/coveralls/jacebrowning/memegen/main.svg" /></a>
+<a href="https://api.memegen.link/docs/"><img alt="Swagger Validator" src="https://img.shields.io/swagger/valid/3.0?label=docs&amp;specUrl=https%3A%2F%2Fapi.memegen.link%2Fdocs%2Fswagger.json" /></a> <!--content-->
+<a href="https://github.com/jacebrowning/memegen/blob/main/LICENSE.txt"><img alt="License" src="https://img.shields.io/badge/license-mit-blue" /></a>
+<a href="https://github.com/sponsors/jacebrowning"><img alt="GitHub Sponsora" src="https://img.shields.io/badge/server%20costs-%2412%2Fmonth-red" /></a></p>
+<h2 id="generating-images">Generating Images</h2>
+<p>The API is stateless so URLs contain all the information necessary to generate meme images. For example, <a href="https://api.memegen.link/images/buzz/memes/memes_everywhere.png">https://api.memegen.link/images/buzz/memes/memes_everywhere.png</a> produces:</p>
+<p><img alt="Sample Image" src="https://api.memegen.link/images/buzz/memes/memes_everywhere.png?&amp;width=600" /></p>
+<h3 id="special-characters">Special Characters</h3>
+<p>In URLs, spaces can be inserted using underscores or dashes:</p>
+<ul>
+<li>underscore (<code>_</code>) → space (<code></code>)</li>
+<li>dash (<code>-</code>) → space (<code></code>)</li>
+<li>2 underscores (<code>__</code>) → underscore (<code>_</code>)</li>
+<li>2 dashes (<code>--</code>) → dash (<code>-</code>)</li>
+</ul>
+<p>Reserved URL characters can be include using escape patterns:</p>
+<ul>
+<li>tilde + Q (<code>~q</code>) → question mark (<code>?</code>)</li>
+<li>tilde + P (<code>~p</code>) → percentage (<code>%</code>)</li>
+<li>tilde + H (<code>~h</code>) → hashtag/pound (<code>#</code>)</li>
+<li>tilde + S (<code>~s</code>) → slash (<code>/</code>)</li>
+<li>tilde + B (<code>~b</code>) → backslash (<code>\</code>)</li>
+<li>2 single quotes (<code>''</code>) → double quote (<code>"</code>)</li>
+</ul>
+<p>For example, <a href="https://api.memegen.link/images/doge/~hspecial_characters~q/underscore__-dash--.png">https://api.memegen.link/images/doge/~hspecial_characters~q/underscore__-dash--.png</a> produces:</p>
+<p><img alt="Escaped Characters" src="https://api.memegen.link/images/doge/~hspecial_characters~q/underscore__-dash--.png?&amp;width=600" /></p>
+<h3 id="alternate-styles">Alternate Styles</h3>
+<p>Some memes come in multiple forms, which can be selected via <code>?style=&lt;style&gt;</code>.</p>
+<p>For example, these are two styles provided by the <a href="https://api.memegen.link/templates/ds">https://api.memegen.link/templates/ds</a> template:</p>
+<table>
+<thead>
+<tr>
+<th align="center"><code>/images/ds.png</code></th>
+<th align="center"><code>/images/ds.png?style=maga</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img alt="" src="https://api.memegen.link/images/ds.png?width=280" /></td>
+<td align="center"><img alt="" src="https://api.memegen.link/images/ds.png?style=maga&amp;width=280" /></td>
+</tr>
+</tbody>
+</table>
+<h3 id="custom-backgrounds">Custom Backgrounds</h3>
+<p>You can also use your own image URL as the background. For example, <a href="https://api.memegen.link/images/custom/_/my_background.png?background=http://www.gstatic.com/webp/gallery/1.png">https://api.memegen.link/images/custom/_/my_background.png?background=http://www.gstatic.com/webp/gallery/1.png</a> produces:</p>
+<p><img alt="Custom Background" src="https://api.memegen.link/images/custom/_/my_background.png?background=http://www.gstatic.com/webp/gallery/1.png&amp;width=600" /></p>
+<h3 id="image-sizing">Image Sizing</h3>
+<p>Images can be scaled to a specific width via <code>?width=&lt;int&gt;</code> or a specific height via <code>?height=&lt;int&gt;</code>. If both parameters are provided (<code>?width=&lt;int&gt;&amp;height=&lt;int&gt;</code>), the image will be padded to the exact dimensions.</p>
+<p>For example, <a href="https://api.memegen.link/images/both/width_or_height/why_not_both~q.png?height=350&amp;width=600">https://api.memegen.link/images/both/width_or_height/why_not_both~q.png?height=350&amp;width=600</a> produces:</p>
+<p><img alt="Custom Size" src="https://api.memegen.link/images/both/width_or_height/why_not_both~q.png?height=350&amp;width=600" /></p>
+<p>Clients can also request <code>.jpg</code> instead of <code>.png</code> for smaller files.</p>
+<h3 id="live-previews">Live Previews</h3>
+<p>If your client is going to show live previews of a custom meme, please use the <code>/images/preview.jpg</code> endpoint, which accepts URL-encoded parameters and returns smaller images to minimize bandwidth.</p>
+<p>Both template keys and URLs are supported:</p>
+<ul>
+<li><a href="https://api.memegen.link/images/preview.jpg?template=fry&amp;line[]=first&amp;line[]=second">https://api.memegen.link/images/preview.jpg?template=fry&amp;line[]=first&amp;line[]=second</a></li>
+<li><a href="https://api.memegen.link/images/preview.jpg?template=https://api.memegen.link/images/fry.png&amp;line[]=first&amp;line[]=second">https://api.memegen.link/images/preview.jpg?template=https://api.memegen.link/images/fry.png&amp;line[]=first&amp;line[]=second</a></li>
+</ul>
+<h2 id="api-documentation">API Documentation</h2>
+<p>The full interactive API documentation is available here: <a href="https://api.memegen.link/docs/">https://api.memegen.link/docs/</a></p>
+<h3 id="sample-clients">Sample Clients</h3>
+<p>Here are some sample clients to explore:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Platforms</th>
+<th align="left">Link</th>
+<th align="left">Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Slack</td>
+<td align="left">---</td>
+<td align="left">Python: <a href="https://github.com/nicolewhite/slack-meme">nicolewhite/slack-meme</a></td>
+</tr>
+<tr>
+<td align="center">Slack</td>
+<td align="left">---</td>
+<td align="left">Go: <a href="https://github.com/CptSpaceToaster/slackbot">CptSpaceToaster/slackbot</a></td>
+</tr>
+<tr>
+<td align="center">Slack</td>
+<td align="left"><a href="http://www.memetizer.com">http://www.memetizer.com</a></td>
+<td align="left">---</td>
+</tr>
+<tr>
+<td align="center">Hain</td>
+<td align="left">---</td>
+<td align="left">JavaScript: <a href="https://github.com/Metrakit/hain-plugin-meme">Metrakit/hain-plugin-meme</a></td>
+</tr>
+<tr>
+<td align="center">Web</td>
+<td align="left">---</td>
+<td align="left">Clojure: <a href="https://github.com/jasich/mighty-fine-memes">jasich/mighty-fine-memes</a></td>
+</tr>
+<tr>
+<td align="center">Web, Slack</td>
+<td align="left"><a href="https://memecomplete.com">https://memecomplete.com</a></td>
+<td align="left">---</td>
+</tr>
+<tr>
+<td align="center">Discord</td>
+<td align="left">---</td>
+<td align="left">JavaScript: <a href="https://github.com/parshsee/discordbot">parshsee/discordbot</a></td>
+</tr>
+</tbody>
+</table>
+<p>Additional clients can be found by searching for <a href="https://github.com/search?o=desc&amp;q=%22memegen.link%22+&amp;ref=searchresults&amp;s=indexed&amp;type=Code&amp;utf8=%E2%9C%93">code examples on GitHub</a>.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+        
+          <a href="CHANGELOG/" title="Changelog" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Changelog
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Powered by
+        <a href="http://timothycrosley.github.io/portray">portray.</a>
+        You too can
+        <a href="http://timothycrosley.github.io/portray">
+          portray</a>
+        your Python project well using automatic documentation.
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="assets/javascripts/vendor.2d1db4bd.min.js"></script>
+      <script src="assets/javascripts/bundle.6627ddf3.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: ".",
+          features: [],
+          search: Object.assign({
+            worker: "assets/javascripts/worker/search.5eca75d3.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

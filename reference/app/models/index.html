@@ -1,0 +1,2219 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../../app/static/favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.14">
+    
+    
+      
+        <title>Models - memegen</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.d3202873.min.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ff0a5ce4.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#546d78">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue-grey" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#module-appmodels" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../.." title="memegen" class="md-header-nav__button md-logo" aria-label="memegen">
+      
+  <img src="../../../app/static/favicon.ico" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            memegen
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Models
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/kyluca/memegen/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    memegen
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="memegen" class="md-nav__button md-logo" aria-label="memegen">
+      
+  <img src="../../../app/static/favicon.ico" alt="logo">
+
+    </a>
+    memegen
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/kyluca/memegen/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 00-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 01-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 000 40.81l195.61 195.6a28.86 28.86 0 0040.8 0l194.69-194.69a28.86 28.86 0 000-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    memegen
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../CHANGELOG/" title="Changelog" class="md-nav__link">
+      Changelog
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../CONTRIBUTING/" title="Contributing" class="md-nav__link">
+      Contributing
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      Reference
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Reference" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        Reference
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1" type="checkbox" id="nav-4-1" checked>
+    
+    <label class="md-nav__link" for="nav-4-1">
+      App
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="App" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-1">
+        <span class="md-nav__icon md-icon"></span>
+        App
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../errors/" title="Errors" class="md-nav__link">
+      Errors
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../helpers/" title="Helpers" class="md-nav__link">
+      Helpers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Models
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" title="Models" class="md-nav__link md-nav__link--active">
+      Models
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    Classes
+  </a>
+  
+    <nav class="md-nav" aria-label="Classes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#template" class="md-nav__link">
+    Template
+  </a>
+  
+    <nav class="md-nav" aria-label="Template">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#class-variables" class="md-nav__link">
+    Class variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#static-methods" class="md-nav__link">
+    Static methods
+  </a>
+  
+    <nav class="md-nav" aria-label="Static methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create" class="md-nav__link">
+    create
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instance-variables" class="md-nav__link">
+    Instance variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#build_custom_url" class="md-nav__link">
+    build_custom_url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build_sample_url" class="md-nav__link">
+    build_sample_url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build_self_url" class="md-nav__link">
+    build_self_url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_image" class="md-nav__link">
+    get_image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jsonify" class="md-nav__link">
+    jsonify
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text" class="md-nav__link">
+    Text
+  </a>
+  
+    <nav class="md-nav" aria-label="Text">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#class-variables_1" class="md-nav__link">
+    Class variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods_1" class="md-nav__link">
+    Methods
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get_anchor" class="md-nav__link">
+    get_anchor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_size" class="md-nav__link">
+    get_size
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stylize" class="md-nav__link">
+    stylize
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../settings/" title="Settings" class="md-nav__link">
+      Settings
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../types/" title="Types" class="md-nav__link">
+      Types
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../views/" title="Views" class="md-nav__link">
+      Views
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1-8" type="checkbox" id="nav-4-1-8">
+    
+    <label class="md-nav__link" for="nav-4-1-8">
+      API
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="API" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-1-8">
+        <span class="md-nav__icon md-icon"></span>
+        API
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/images/" title="Images" class="md-nav__link">
+      Images
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/shortcuts/" title="Shortcuts" class="md-nav__link">
+      Shortcuts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/templates/" title="Templates" class="md-nav__link">
+      Templates
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1-9" type="checkbox" id="nav-4-1-9">
+    
+    <label class="md-nav__link" for="nav-4-1-9">
+      Tests
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Tests" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-1-9">
+        <span class="md-nav__icon md-icon"></span>
+        Tests
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tests/conftest/" title="Conftest" class="md-nav__link">
+      Conftest
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tests/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tests/test_apis/" title="Test Apis" class="md-nav__link">
+      Test Apis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tests/test_docs/" title="Test Docs" class="md-nav__link">
+      Test Docs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tests/test_images/" title="Test Images" class="md-nav__link">
+      Test Images
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tests/test_models/" title="Test Models" class="md-nav__link">
+      Test Models
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tests/test_text/" title="Test Text" class="md-nav__link">
+      Test Text
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../tests/test_views/" title="Test Views" class="md-nav__link">
+      Test Views
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4-1-10" type="checkbox" id="nav-4-1-10">
+    
+    <label class="md-nav__link" for="nav-4-1-10">
+      Utils
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Utils" data-md-level="3">
+      <label class="md-nav__title" for="nav-4-1-10">
+        <span class="md-nav__icon md-icon"></span>
+        Utils
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../utils/html/" title="Html" class="md-nav__link">
+      Html
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../utils/images/" title="Images" class="md-nav__link">
+      Images
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../utils/" title="Index" class="md-nav__link">
+      Index
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../utils/text/" title="Text" class="md-nav__link">
+      Text
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    Classes
+  </a>
+  
+    <nav class="md-nav" aria-label="Classes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#template" class="md-nav__link">
+    Template
+  </a>
+  
+    <nav class="md-nav" aria-label="Template">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#class-variables" class="md-nav__link">
+    Class variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#static-methods" class="md-nav__link">
+    Static methods
+  </a>
+  
+    <nav class="md-nav" aria-label="Static methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create" class="md-nav__link">
+    create
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instance-variables" class="md-nav__link">
+    Instance variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    Methods
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#build_custom_url" class="md-nav__link">
+    build_custom_url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build_sample_url" class="md-nav__link">
+    build_sample_url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build_self_url" class="md-nav__link">
+    build_self_url
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_image" class="md-nav__link">
+    get_image
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jsonify" class="md-nav__link">
+    jsonify
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text" class="md-nav__link">
+    Text
+  </a>
+  
+    <nav class="md-nav" aria-label="Text">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#class-variables_1" class="md-nav__link">
+    Class variables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#methods_1" class="md-nav__link">
+    Methods
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get_anchor" class="md-nav__link">
+    get_anchor
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get_size" class="md-nav__link">
+    get_size
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stylize" class="md-nav__link">
+    stylize
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/kyluca/memegen/edit/master/reference/app/models.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                <h1 id="module-appmodels">Module app.models</h1>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">hashlib</span>
+
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span>
+
+<span class="kn">from</span> <span class="nn">urllib.parse</span> <span class="kn">import</span> <span class="n">urlparse</span>
+
+<span class="kn">import</span> <span class="nn">aiofiles</span>
+
+<span class="kn">import</span> <span class="nn">aiohttp</span>
+
+<span class="kn">from</span> <span class="nn">aiohttp.client_exceptions</span> <span class="kn">import</span> <span class="n">ClientConnectionError</span><span class="p">,</span> <span class="n">InvalidURL</span>
+
+<span class="kn">from</span> <span class="nn">datafiles</span> <span class="kn">import</span> <span class="n">datafile</span><span class="p">,</span> <span class="n">field</span>
+
+<span class="kn">from</span> <span class="nn">sanic</span> <span class="kn">import</span> <span class="n">Sanic</span>
+
+<span class="kn">from</span> <span class="nn">sanic.log</span> <span class="kn">import</span> <span class="n">logger</span>
+
+<span class="kn">from</span> <span class="nn">spongemock</span> <span class="kn">import</span> <span class="n">spongemock</span>
+
+<span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">settings</span><span class="p">,</span> <span class="n">utils</span>
+
+<span class="kn">from</span> <span class="nn">.types</span> <span class="kn">import</span> <span class="n">Dimensions</span><span class="p">,</span> <span class="n">Point</span>
+
+<span class="nd">@datafile</span>
+
+<span class="k">class</span> <span class="nc">Text</span><span class="p">:</span>
+
+    <span class="n">color</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;white&quot;</span>
+
+    <span class="n">style</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;upper&quot;</span>
+
+    <span class="n">anchor_x</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+    <span class="n">anchor_y</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span>
+
+    <span class="n">angle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="n">scale_x</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span>
+
+    <span class="n">scale_y</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.2</span>
+
+    <span class="k">def</span> <span class="nf">get_anchor</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image_size</span><span class="p">:</span> <span class="n">Dimensions</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Point</span><span class="p">:</span>
+
+        <span class="n">image_width</span><span class="p">,</span> <span class="n">image_height</span> <span class="o">=</span> <span class="n">image_size</span>
+
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">image_width</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">anchor_x</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">image_height</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">anchor_y</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">get_size</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image_size</span><span class="p">:</span> <span class="n">Dimensions</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dimensions</span><span class="p">:</span>
+
+        <span class="n">image_width</span><span class="p">,</span> <span class="n">image_height</span> <span class="o">=</span> <span class="n">image_size</span>
+
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">image_width</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale_x</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">image_height</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">scale_y</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">stylize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">style</span> <span class="o">==</span> <span class="s2">&quot;none&quot;</span><span class="p">:</span>
+
+            <span class="k">return</span> <span class="n">text</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">style</span> <span class="o">==</span> <span class="s2">&quot;default&quot;</span><span class="p">:</span>
+
+            <span class="k">return</span> <span class="n">text</span><span class="o">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="k">if</span> <span class="n">text</span><span class="o">.</span><span class="n">islower</span><span class="p">()</span> <span class="k">else</span> <span class="n">text</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">style</span> <span class="o">==</span> <span class="s2">&quot;mock&quot;</span><span class="p">:</span>
+
+            <span class="k">return</span> <span class="n">spongemock</span><span class="o">.</span><span class="n">mock</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">diversity_bias</span><span class="o">=</span><span class="mf">0.75</span><span class="p">,</span> <span class="n">random_seed</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+        <span class="n">method</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">style</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="n">style</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">method</span><span class="p">:</span>
+
+            <span class="k">return</span> <span class="n">method</span><span class="p">()</span>
+
+        <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Unsupported text style: {self.style}&quot;</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="n">text</span>
+
+<span class="nd">@datafile</span><span class="p">(</span><span class="s2">&quot;../templates/{self.key}/config.yml&quot;</span><span class="p">,</span> <span class="n">defaults</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">Template</span><span class="p">:</span>
+
+    <span class="n">key</span><span class="p">:</span> <span class="nb">str</span>
+
+    <span class="n">name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+
+    <span class="n">source</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="bp">None</span>
+
+    <span class="n">text</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">Text</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span>
+
+        <span class="n">default_factory</span><span class="o">=</span><span class="k">lambda</span><span class="p">:</span> <span class="p">[</span><span class="n">Text</span><span class="p">(),</span> <span class="n">Text</span><span class="p">(</span><span class="n">anchor_x</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">anchor_y</span><span class="o">=</span><span class="mf">0.8</span><span class="p">)]</span>
+
+    <span class="p">)</span>
+
+    <span class="n">styles</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="k">lambda</span><span class="p">:</span> <span class="p">[</span><span class="n">settings</span><span class="o">.</span><span class="n">DEFAULT_STYLE</span><span class="p">])</span>
+
+    <span class="n">sample</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="k">lambda</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;YOUR TEXT&quot;</span><span class="p">,</span> <span class="s2">&quot;GOES HERE&quot;</span><span class="p">])</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+        <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">directory</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+
+    <span class="k">def</span> <span class="nf">valid</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">settings</span><span class="o">.</span><span class="n">DEPLOYED</span><span class="p">:</span>
+
+            <span class="n">styles</span> <span class="o">=</span> <span class="p">[]</span>
+
+            <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">directory</span><span class="o">.</span><span class="n">iterdir</span><span class="p">():</span>
+
+                <span class="k">if</span> <span class="n">path</span><span class="o">.</span><span class="n">stem</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">{</span><span class="s2">&quot;config&quot;</span><span class="p">,</span> <span class="n">settings</span><span class="o">.</span><span class="n">DEFAULT_STYLE</span><span class="p">}:</span>
+
+                    <span class="n">styles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">path</span><span class="o">.</span><span class="n">stem</span><span class="p">)</span>
+
+            <span class="n">styles</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+
+            <span class="k">if</span> <span class="n">styles</span> <span class="o">!=</span> <span class="bp">self</span><span class="o">.</span><span class="n">styles</span><span class="p">:</span>
+
+                <span class="bp">self</span><span class="o">.</span><span class="n">styles</span> <span class="o">=</span> <span class="n">styles</span>
+
+        <span class="k">return</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">key</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">suffix</span> <span class="o">!=</span> <span class="s2">&quot;.img&quot;</span>
+
+    <span class="nd">@property</span>
+
+    <span class="k">def</span> <span class="nf">directory</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Path</span><span class="p">:</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">datafile</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">parent</span>
+
+    <span class="nd">@property</span>
+
+    <span class="k">def</span> <span class="nf">image</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Path</span><span class="p">:</span>
+
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_image</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">get_image</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">style</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Path</span><span class="p">:</span>
+
+        <span class="n">style</span> <span class="o">=</span> <span class="n">style</span> <span class="ow">or</span> <span class="n">settings</span><span class="o">.</span><span class="n">DEFAULT_STYLE</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">directory</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">directory</span><span class="o">.</span><span class="n">iterdir</span><span class="p">():</span>
+
+            <span class="k">if</span> <span class="n">path</span><span class="o">.</span><span class="n">stem</span> <span class="o">==</span> <span class="n">style</span><span class="p">:</span>
+
+                <span class="k">return</span> <span class="n">path</span>
+
+        <span class="k">if</span> <span class="n">style</span> <span class="o">==</span> <span class="n">settings</span><span class="o">.</span><span class="n">DEFAULT_STYLE</span><span class="p">:</span>
+
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;No default background image for template: {self.key}&quot;</span><span class="p">)</span>
+
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">directory</span> <span class="o">/</span> <span class="n">f</span><span class="s2">&quot;{settings.DEFAULT_STYLE}.img&quot;</span>
+
+        <span class="k">else</span><span class="p">:</span>
+
+            <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Style {style!r} not available for {self.key}&quot;</span><span class="p">)</span>
+
+            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_image</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">jsonify</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">app</span><span class="p">:</span> <span class="n">Sanic</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
+
+        <span class="k">return</span> <span class="p">{</span>
+
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
+
+            <span class="s2">&quot;key&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">key</span><span class="p">,</span>
+
+            <span class="s2">&quot;styles&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">styles</span><span class="p">,</span>
+
+            <span class="s2">&quot;blank&quot;</span><span class="p">:</span> <span class="n">app</span><span class="o">.</span><span class="n">url_for</span><span class="p">(</span>
+
+                <span class="n">f</span><span class="s2">&quot;images.blank_{settings.DEFAULT_EXT}&quot;</span><span class="p">,</span>
+
+                <span class="n">template_key</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">key</span><span class="p">,</span>
+
+                <span class="n">_external</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+
+                <span class="n">_scheme</span><span class="o">=</span><span class="n">settings</span><span class="o">.</span><span class="n">SCHEME</span><span class="p">,</span>
+
+            <span class="p">),</span>
+
+            <span class="s2">&quot;sample&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">build_sample_url</span><span class="p">(</span><span class="n">app</span><span class="p">),</span>
+
+            <span class="s2">&quot;source&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">source</span><span class="p">,</span>
+
+            <span class="s2">&quot;_self&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">build_self_url</span><span class="p">(</span><span class="n">app</span><span class="p">),</span>
+
+        <span class="p">}</span>
+
+    <span class="k">def</span> <span class="nf">build_self_url</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">app</span><span class="p">:</span> <span class="n">Sanic</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+
+        <span class="k">return</span> <span class="n">app</span><span class="o">.</span><span class="n">url_for</span><span class="p">(</span>
+
+            <span class="s2">&quot;templates.detail&quot;</span><span class="p">,</span>
+
+            <span class="n">key</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">key</span><span class="p">,</span>
+
+            <span class="n">_external</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+
+            <span class="n">_scheme</span><span class="o">=</span><span class="n">settings</span><span class="o">.</span><span class="n">SCHEME</span><span class="p">,</span>
+
+        <span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">build_sample_url</span><span class="p">(</span>
+
+        <span class="bp">self</span><span class="p">,</span>
+
+        <span class="n">app</span><span class="p">:</span> <span class="n">Sanic</span><span class="p">,</span>
+
+        <span class="n">view_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">f</span><span class="s2">&quot;images.text_{settings.DEFAULT_EXT}&quot;</span><span class="p">,</span>
+
+        <span class="o">*</span><span class="p">,</span>
+
+        <span class="n">external</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="bp">True</span><span class="p">,</span>
+
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+
+        <span class="n">kwargs</span> <span class="o">=</span> <span class="p">{</span>
+
+            <span class="s2">&quot;template_key&quot;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">key</span><span class="p">,</span>
+
+            <span class="s2">&quot;text_paths&quot;</span><span class="p">:</span> <span class="n">utils</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sample</span><span class="p">),</span>
+
+            <span class="s2">&quot;_external&quot;</span><span class="p">:</span> <span class="n">external</span><span class="p">,</span>
+
+        <span class="p">}</span>
+
+        <span class="k">if</span> <span class="n">external</span><span class="p">:</span>
+
+            <span class="n">kwargs</span><span class="p">[</span><span class="s2">&quot;_scheme&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">settings</span><span class="o">.</span><span class="n">SCHEME</span>
+
+        <span class="k">return</span> <span class="n">app</span><span class="o">.</span><span class="n">url_for</span><span class="p">(</span><span class="n">view_name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">build_custom_url</span><span class="p">(</span>
+
+        <span class="bp">self</span><span class="p">,</span>
+
+        <span class="n">app</span><span class="p">:</span> <span class="n">Sanic</span><span class="p">,</span>
+
+        <span class="n">text_lines</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
+
+        <span class="o">*</span><span class="p">,</span>
+
+        <span class="n">extension</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+
+        <span class="n">background</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+
+        <span class="n">external</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="bp">False</span><span class="p">,</span>
+
+    <span class="p">):</span>
+
+        <span class="k">if</span> <span class="n">extension</span> <span class="ow">in</span> <span class="p">{</span><span class="s2">&quot;jpg&quot;</span><span class="p">,</span> <span class="s2">&quot;png&quot;</span><span class="p">}:</span>
+
+            <span class="n">view_name</span> <span class="o">=</span> <span class="n">f</span><span class="s2">&quot;images.text_{extension}&quot;</span>
+
+        <span class="k">else</span><span class="p">:</span>
+
+            <span class="n">view_name</span> <span class="o">=</span> <span class="n">f</span><span class="s2">&quot;images.text_{settings.DEFAULT_EXT}&quot;</span>
+
+        <span class="n">url</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">url_for</span><span class="p">(</span>
+
+            <span class="n">view_name</span><span class="p">,</span>
+
+            <span class="n">template_key</span><span class="o">=</span><span class="s2">&quot;custom&quot;</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;_custom&quot;</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">key</span><span class="p">,</span>
+
+            <span class="n">text_paths</span><span class="o">=</span><span class="n">utils</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="n">text_lines</span><span class="p">),</span>
+
+            <span class="n">_external</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+
+            <span class="n">_scheme</span><span class="o">=</span><span class="n">settings</span><span class="o">.</span><span class="n">SCHEME</span><span class="p">,</span>
+
+        <span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">background</span><span class="p">:</span>
+
+            <span class="n">url</span> <span class="o">+=</span> <span class="s2">&quot;?background=&quot;</span> <span class="o">+</span> <span class="n">background</span>
+
+        <span class="k">return</span> <span class="n">url</span>
+
+    <span class="nd">@classmethod</span>
+
+    <span class="n">async</span> <span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">url</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Template&quot;</span><span class="p">:</span>
+
+        <span class="n">parts</span> <span class="o">=</span> <span class="n">urlparse</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="s2">&quot;memegen.link&quot;</span> <span class="ow">in</span> <span class="n">parts</span><span class="o">.</span><span class="n">netloc</span><span class="p">:</span>
+
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Handling builtin template: {url}&quot;</span><span class="p">)</span>
+
+            <span class="n">key</span> <span class="o">=</span> <span class="n">parts</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)[</span><span class="mi">2</span><span class="p">]</span>
+
+            <span class="k">return</span> <span class="bp">cls</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+
+        <span class="n">key</span> <span class="o">=</span> <span class="s2">&quot;_custom-&quot;</span> <span class="o">+</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha1</span><span class="p">(</span><span class="n">url</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+
+        <span class="n">template</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get_or_create</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">url</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">template</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">settings</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">:</span>
+
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Found background {url} at {template.image}&quot;</span><span class="p">)</span>
+
+        <span class="k">else</span><span class="p">:</span>
+
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Saving background {url} to {template.image}&quot;</span><span class="p">)</span>
+
+            <span class="n">async</span> <span class="k">with</span> <span class="n">aiohttp</span><span class="o">.</span><span class="n">ClientSession</span><span class="p">()</span> <span class="k">as</span> <span class="n">session</span><span class="p">:</span>
+
+                <span class="k">try</span><span class="p">:</span>
+
+                    <span class="n">async</span> <span class="k">with</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span> <span class="k">as</span> <span class="n">response</span><span class="p">:</span>
+
+                        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+
+                            <span class="n">template</span><span class="o">.</span><span class="n">directory</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+                            <span class="n">f</span> <span class="o">=</span> <span class="n">await</span> <span class="n">aiofiles</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">template</span><span class="o">.</span><span class="n">image</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;wb&quot;</span><span class="p">)</span>  <span class="c1"># type: ignore</span>
+
+                            <span class="n">await</span> <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">await</span> <span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+
+                            <span class="n">await</span> <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+                        <span class="k">else</span><span class="p">:</span>
+
+                            <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;{response.status} response from {url}&quot;</span><span class="p">)</span>
+
+                <span class="k">except</span> <span class="p">(</span><span class="n">InvalidURL</span><span class="p">,</span> <span class="n">ClientConnectionError</span><span class="p">):</span>
+
+                    <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Invalid response from {url}&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">template</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+
+            <span class="k">try</span><span class="p">:</span>
+
+                <span class="n">utils</span><span class="o">.</span><span class="n">images</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">template</span><span class="o">.</span><span class="n">image</span><span class="p">)</span>
+
+            <span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+
+                <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+
+                <span class="n">template</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">unlink</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="n">template</span>
+</code></pre></div>
+
+
+</details>
+<h2 id="classes">Classes</h2>
+<h3 id="template">Template</h3>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">Template</span><span class="p">(</span>
+    <span class="o">*</span><span class="n">args</span><span class="p">,</span>
+    <span class="o">**</span><span class="n">kwargs</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p>Template(key: str, name: str = '', source: Union[str, NoneType] = None, text: List[app.models.Text] = <factory>, styles: List[str] = <factory>, sample: List[str] = <factory>)</p>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nl">Template</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">    </span><span class="k">key</span><span class="err">:</span><span class="w"> </span><span class="nf">str</span><span class="w"></span>
+
+<span class="w">    </span><span class="nl">name</span><span class="p">:</span><span class="w"> </span><span class="nf">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;&quot;</span><span class="w"></span>
+
+<span class="w">    </span><span class="nl">source</span><span class="p">:</span><span class="w"> </span><span class="n">Optional</span><span class="o">[</span><span class="n">str</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">None</span><span class="w"></span>
+
+<span class="w">    </span><span class="nc">text</span><span class="err">:</span><span class="w"> </span><span class="n">List</span><span class="o">[</span><span class="n">Text</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">field</span><span class="p">(</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">default_factory</span><span class="o">=</span><span class="nl">lambda</span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="n">Text(), Text(anchor_x=0.0, anchor_y=0.8)</span><span class="o">]</span><span class="w"></span>
+
+<span class="w">    </span><span class="p">)</span><span class="w"></span>
+
+<span class="w">    </span><span class="nl">styles</span><span class="p">:</span><span class="w"> </span><span class="n">List</span><span class="o">[</span><span class="n">str</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nl">lambda</span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="n">settings.DEFAULT_STYLE</span><span class="o">]</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">    </span><span class="nl">sample</span><span class="p">:</span><span class="w"> </span><span class="n">List</span><span class="o">[</span><span class="n">str</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">field</span><span class="p">(</span><span class="n">default_factory</span><span class="o">=</span><span class="nl">lambda</span><span class="p">:</span><span class="w"> </span><span class="o">[</span><span class="n">&quot;YOUR TEXT&quot;, &quot;GOES HERE&quot;</span><span class="o">]</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">__str__</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nf">str</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">directory</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">    </span><span class="nv">@property</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">valid</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nl">bool</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">settings</span><span class="p">.</span><span class="nl">DEPLOYED</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">styles</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">[]</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="k">path</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">directory</span><span class="p">.</span><span class="n">iterdir</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="k">path</span><span class="p">.</span><span class="n">stem</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="err">{</span><span class="ss">&quot;config&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">settings</span><span class="p">.</span><span class="n">DEFAULT_STYLE</span><span class="err">}:</span><span class="w"></span>
+
+<span class="w">                    </span><span class="n">styles</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="k">path</span><span class="p">.</span><span class="n">stem</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">styles</span><span class="p">.</span><span class="n">sort</span><span class="p">()</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="n">styles</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="nl">styles</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">self</span><span class="p">.</span><span class="n">styles</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">styles</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="k">key</span><span class="p">.</span><span class="n">startswith</span><span class="p">(</span><span class="ss">&quot;_&quot;</span><span class="p">)</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="nc">image</span><span class="p">.</span><span class="n">suffix</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="ss">&quot;.img&quot;</span><span class="w"></span>
+
+<span class="w">    </span><span class="nv">@property</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">directory</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="k">Path</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">datafile</span><span class="p">.</span><span class="k">path</span><span class="p">.</span><span class="n">parent</span><span class="w"></span>
+
+<span class="w">    </span><span class="nv">@property</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="nc">image</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="k">Path</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">get_image</span><span class="p">()</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">get_image</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="nl">style</span><span class="p">:</span><span class="w"> </span><span class="nf">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="k">Path</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">style</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">style</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">settings</span><span class="p">.</span><span class="n">DEFAULT_STYLE</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">self</span><span class="p">.</span><span class="n">directory</span><span class="p">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="k">True</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="k">path</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">directory</span><span class="p">.</span><span class="n">iterdir</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="k">path</span><span class="p">.</span><span class="n">stem</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="nl">style</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="k">path</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">style</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">settings</span><span class="p">.</span><span class="nl">DEFAULT_STYLE</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;No default background image for template: {self.key}&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">directory</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">f</span><span class="ss">&quot;{settings.DEFAULT_STYLE}.img&quot;</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">else</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">logger</span><span class="p">.</span><span class="n">warning</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;Style {style!r} not available for {self.key}&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">get_image</span><span class="p">()</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">jsonify</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="nl">app</span><span class="p">:</span><span class="w"> </span><span class="n">Sanic</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nl">Dict</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="err">{</span><span class="w"></span>
+
+<span class="w">            </span><span class="ss">&quot;name&quot;</span><span class="err">:</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">            </span><span class="ss">&quot;key&quot;</span><span class="err">:</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="k">key</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">            </span><span class="ss">&quot;styles&quot;</span><span class="err">:</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">styles</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">            </span><span class="ss">&quot;blank&quot;</span><span class="err">:</span><span class="w"> </span><span class="n">app</span><span class="p">.</span><span class="n">url_for</span><span class="p">(</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">f</span><span class="ss">&quot;images.blank_{settings.DEFAULT_EXT}&quot;</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">template_key</span><span class="o">=</span><span class="n">self</span><span class="p">.</span><span class="k">key</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">_external</span><span class="o">=</span><span class="k">True</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">_scheme</span><span class="o">=</span><span class="n">settings</span><span class="p">.</span><span class="n">SCHEME</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">            </span><span class="p">),</span><span class="w"></span>
+
+<span class="w">            </span><span class="ss">&quot;sample&quot;</span><span class="err">:</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">build_sample_url</span><span class="p">(</span><span class="n">app</span><span class="p">),</span><span class="w"></span>
+
+<span class="w">            </span><span class="ss">&quot;source&quot;</span><span class="err">:</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">source</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">            </span><span class="ss">&quot;_self&quot;</span><span class="err">:</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="n">build_self_url</span><span class="p">(</span><span class="n">app</span><span class="p">),</span><span class="w"></span>
+
+<span class="w">        </span><span class="err">}</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">build_self_url</span><span class="p">(</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="nl">app</span><span class="p">:</span><span class="w"> </span><span class="n">Sanic</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nf">str</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">app</span><span class="p">.</span><span class="n">url_for</span><span class="p">(</span><span class="w"></span>
+
+<span class="w">            </span><span class="ss">&quot;templates.detail&quot;</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">key</span><span class="o">=</span><span class="n">self</span><span class="p">.</span><span class="k">key</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">_external</span><span class="o">=</span><span class="k">True</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">_scheme</span><span class="o">=</span><span class="n">settings</span><span class="p">.</span><span class="n">SCHEME</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">        </span><span class="p">)</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">build_sample_url</span><span class="p">(</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">self</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">        </span><span class="nl">app</span><span class="p">:</span><span class="w"> </span><span class="n">Sanic</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">        </span><span class="nl">view_name</span><span class="p">:</span><span class="w"> </span><span class="nf">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f</span><span class="ss">&quot;images.text_{settings.DEFAULT_EXT}&quot;</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">        </span><span class="o">*</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">external</span><span class="err">:</span><span class="w"> </span><span class="n">bool</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">True</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">    </span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="nf">str</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">kwargs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{</span><span class="w"></span>
+
+<span class="w">            </span><span class="ss">&quot;template_key&quot;</span><span class="err">:</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="k">key</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">            </span><span class="ss">&quot;text_paths&quot;</span><span class="err">:</span><span class="w"> </span><span class="n">utils</span><span class="p">.</span><span class="nc">text</span><span class="p">.</span><span class="n">encode</span><span class="p">(</span><span class="n">self</span><span class="p">.</span><span class="n">sample</span><span class="p">),</span><span class="w"></span>
+
+<span class="w">            </span><span class="ss">&quot;_external&quot;</span><span class="err">:</span><span class="w"> </span><span class="k">external</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">        </span><span class="err">}</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="k">external</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">kwargs</span><span class="o">[</span><span class="n">&quot;_scheme&quot;</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">settings</span><span class="p">.</span><span class="n">SCHEME</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">app</span><span class="p">.</span><span class="n">url_for</span><span class="p">(</span><span class="n">view_name</span><span class="p">,</span><span class="w"> </span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">build_custom_url</span><span class="p">(</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">self</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">        </span><span class="nl">app</span><span class="p">:</span><span class="w"> </span><span class="n">Sanic</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">        </span><span class="nl">text_lines</span><span class="p">:</span><span class="w"> </span><span class="n">List</span><span class="o">[</span><span class="n">str</span><span class="o">]</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">        </span><span class="o">*</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">        </span><span class="nl">extension</span><span class="p">:</span><span class="w"> </span><span class="nf">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">        </span><span class="nl">background</span><span class="p">:</span><span class="w"> </span><span class="nf">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">external</span><span class="err">:</span><span class="w"> </span><span class="n">bool</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">False</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">    </span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">extension</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="err">{</span><span class="ss">&quot;jpg&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;png&quot;</span><span class="err">}:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">view_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f</span><span class="ss">&quot;images.text_{extension}&quot;</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">else</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">view_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f</span><span class="ss">&quot;images.text_{settings.DEFAULT_EXT}&quot;</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">app</span><span class="p">.</span><span class="n">url_for</span><span class="p">(</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">view_name</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">template_key</span><span class="o">=</span><span class="ss">&quot;custom&quot;</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="k">key</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;_custom&quot;</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="k">key</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">text_paths</span><span class="o">=</span><span class="n">utils</span><span class="p">.</span><span class="nc">text</span><span class="p">.</span><span class="n">encode</span><span class="p">(</span><span class="n">text_lines</span><span class="p">),</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">_external</span><span class="o">=</span><span class="k">True</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">_scheme</span><span class="o">=</span><span class="n">settings</span><span class="p">.</span><span class="n">SCHEME</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">        </span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nl">background</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">url</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="ss">&quot;?background=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">background</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">url</span><span class="w"></span>
+
+<span class="w">    </span><span class="nv">@classmethod</span><span class="w"></span>
+
+<span class="w">    </span><span class="n">async</span><span class="w"> </span><span class="n">def</span><span class="w"> </span><span class="k">create</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span><span class="w"> </span><span class="nl">url</span><span class="p">:</span><span class="w"> </span><span class="nf">str</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="ss">&quot;Template&quot;</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">parts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">urlparse</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="ss">&quot;memegen.link&quot;</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">parts</span><span class="p">.</span><span class="nl">netloc</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;Handling builtin template: {url}&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">parts</span><span class="p">.</span><span class="k">path</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="ss">&quot;.&quot;</span><span class="p">)</span><span class="o">[</span><span class="n">0</span><span class="o">]</span><span class="p">.</span><span class="n">split</span><span class="p">(</span><span class="ss">&quot;/&quot;</span><span class="p">)</span><span class="o">[</span><span class="n">2</span><span class="o">]</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">cls</span><span class="p">.</span><span class="n">objects</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="k">key</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;_custom-&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">hashlib</span><span class="p">.</span><span class="n">sha1</span><span class="p">(</span><span class="n">url</span><span class="p">.</span><span class="n">encode</span><span class="p">()).</span><span class="n">hexdigest</span><span class="p">()</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">template</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cls</span><span class="p">.</span><span class="n">objects</span><span class="p">.</span><span class="n">get_or_create</span><span class="p">(</span><span class="k">key</span><span class="p">,</span><span class="w"> </span><span class="n">url</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">template</span><span class="p">.</span><span class="nc">image</span><span class="p">.</span><span class="ow">exists</span><span class="p">()</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">settings</span><span class="p">.</span><span class="nl">DEBUG</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">logger</span><span class="p">.</span><span class="n">info</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;Found background {url} at {template.image}&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">else</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">logger</span><span class="p">.</span><span class="n">info</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;Saving background {url} to {template.image}&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">async</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">aiohttp</span><span class="p">.</span><span class="n">ClientSession</span><span class="p">()</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="k">session</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                </span><span class="k">try</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                    </span><span class="n">async</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="k">session</span><span class="p">.</span><span class="k">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nl">response</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">                        </span><span class="k">if</span><span class="w"> </span><span class="n">response</span><span class="p">.</span><span class="n">status</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">200</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                            </span><span class="n">template</span><span class="p">.</span><span class="n">directory</span><span class="p">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="k">True</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">                            </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">await</span><span class="w"> </span><span class="n">aiofiles</span><span class="p">.</span><span class="k">open</span><span class="p">(</span><span class="n">template</span><span class="p">.</span><span class="nc">image</span><span class="p">,</span><span class="w"> </span><span class="n">mode</span><span class="o">=</span><span class="ss">&quot;wb&quot;</span><span class="p">)</span><span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="nl">type</span><span class="p">:</span><span class="w"> </span><span class="k">ignore</span><span class="w"></span>
+
+<span class="w">                            </span><span class="n">await</span><span class="w"> </span><span class="n">f</span><span class="p">.</span><span class="k">write</span><span class="p">(</span><span class="n">await</span><span class="w"> </span><span class="n">response</span><span class="p">.</span><span class="k">read</span><span class="p">())</span><span class="w"></span>
+
+<span class="w">                            </span><span class="n">await</span><span class="w"> </span><span class="n">f</span><span class="p">.</span><span class="k">close</span><span class="p">()</span><span class="w"></span>
+
+<span class="w">                        </span><span class="k">else</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                            </span><span class="n">logger</span><span class="p">.</span><span class="n">error</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;{response.status} response from {url}&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">                </span><span class="ow">except</span><span class="w"> </span><span class="p">(</span><span class="n">InvalidURL</span><span class="p">,</span><span class="w"> </span><span class="n">ClientConnectionError</span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                    </span><span class="n">logger</span><span class="p">.</span><span class="n">error</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;Invalid response from {url}&quot;</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">template</span><span class="p">.</span><span class="nc">image</span><span class="p">.</span><span class="ow">exists</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="k">try</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">utils</span><span class="p">.</span><span class="n">images</span><span class="p">.</span><span class="k">load</span><span class="p">(</span><span class="n">template</span><span class="p">.</span><span class="nc">image</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">            </span><span class="ow">except</span><span class="w"> </span><span class="n">OSError</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nl">e</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">logger</span><span class="p">.</span><span class="n">error</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="w"></span>
+
+<span class="w">                </span><span class="n">template</span><span class="p">.</span><span class="nc">image</span><span class="p">.</span><span class="n">unlink</span><span class="p">()</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">template</span><span class="w"></span>
+</code></pre></div>
+
+
+</details>
+<hr />
+<h4 id="class-variables">Class variables</h4>
+<div class="codehilite"><pre><span></span><code><span class="n">Meta</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">name</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">objects</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">source</span>
+</code></pre></div>
+
+
+<h4 id="static-methods">Static methods</h4>
+<h5 id="create">create</h5>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">create</span><span class="p">(</span>
+    <span class="n">url</span><span class="p">:</span> <span class="nb">str</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="s1">&#39;Template&#39;</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="err">@</span><span class="n">classmethod</span>
+
+    <span class="n">async</span> <span class="n">def</span> <span class="n">create</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span> <span class="n">url</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="s2">&quot;Template&quot;</span><span class="p">:</span>
+
+        <span class="n">parts</span> <span class="o">=</span> <span class="n">urlparse</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="s2">&quot;memegen.link&quot;</span> <span class="ow">in</span> <span class="n">parts</span><span class="o">.</span><span class="n">netloc</span><span class="p">:</span>
+
+            <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Handling builtin template: {url}&quot;</span><span class="p">)</span>
+
+            <span class="n">key</span> <span class="o">=</span> <span class="n">parts</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)[</span><span class="mi">2</span><span class="p">]</span>
+
+            <span class="k">return</span> <span class="n">cls</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+
+        <span class="n">key</span> <span class="o">=</span> <span class="s2">&quot;_custom-&quot;</span> <span class="o">+</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha1</span><span class="p">(</span><span class="n">url</span><span class="o">.</span><span class="n">encode</span><span class="p">())</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+
+        <span class="n">template</span> <span class="o">=</span> <span class="n">cls</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get_or_create</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">url</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">template</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">settings</span><span class="o">.</span><span class="n">DEBUG</span><span class="p">:</span>
+
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Found background {url} at {template.image}&quot;</span><span class="p">)</span>
+
+        <span class="k">else</span><span class="p">:</span>
+
+            <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Saving background {url} to {template.image}&quot;</span><span class="p">)</span>
+
+            <span class="n">async</span> <span class="n">with</span> <span class="n">aiohttp</span><span class="o">.</span><span class="n">ClientSession</span><span class="p">()</span> <span class="k">as</span> <span class="n">session</span><span class="p">:</span>
+
+                <span class="n">try</span><span class="p">:</span>
+
+                    <span class="n">async</span> <span class="n">with</span> <span class="n">session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span> <span class="k">as</span> <span class="n">response</span><span class="p">:</span>
+
+                        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+
+                            <span class="n">template</span><span class="o">.</span><span class="n">directory</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="n">True</span><span class="p">)</span>
+
+                            <span class="n">f</span> <span class="o">=</span> <span class="n">await</span> <span class="n">aiofiles</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">template</span><span class="o">.</span><span class="n">image</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;wb&quot;</span><span class="p">)</span>  <span class="c1"># type: ignore</span>
+
+                            <span class="n">await</span> <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">await</span> <span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+
+                            <span class="n">await</span> <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+                        <span class="k">else</span><span class="p">:</span>
+
+                            <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;{response.status} response from {url}&quot;</span><span class="p">)</span>
+
+                <span class="n">except</span> <span class="p">(</span><span class="n">InvalidURL</span><span class="p">,</span> <span class="n">ClientConnectionError</span><span class="p">):</span>
+
+                    <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Invalid response from {url}&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">template</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
+
+            <span class="n">try</span><span class="p">:</span>
+
+                <span class="n">utils</span><span class="o">.</span><span class="n">images</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">template</span><span class="o">.</span><span class="n">image</span><span class="p">)</span>
+
+            <span class="n">except</span> <span class="n">OSError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+
+                <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+
+                <span class="n">template</span><span class="o">.</span><span class="n">image</span><span class="o">.</span><span class="n">unlink</span><span class="p">()</span>
+
+        <span class="k">return</span> <span class="n">template</span>
+</code></pre></div>
+
+
+</details>
+<h4 id="instance-variables">Instance variables</h4>
+<div class="codehilite"><pre><span></span><code><span class="n">directory</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">image</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">valid</span>
+</code></pre></div>
+
+
+<h4 id="methods">Methods</h4>
+<h5 id="build_custom_url">build_custom_url</h5>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">build_custom_url</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">app</span><span class="p">:</span> <span class="n">sanic</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">Sanic</span><span class="p">,</span>
+    <span class="n">text_lines</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span>
+    <span class="o">*</span><span class="p">,</span>
+    <span class="n">extension</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+    <span class="n">background</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+    <span class="n">external</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="n">def</span><span class="w"> </span><span class="n">build_custom_url</span><span class="p">(</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">self</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">        </span><span class="nl">app</span><span class="p">:</span><span class="w"> </span><span class="n">Sanic</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">        </span><span class="nl">text_lines</span><span class="p">:</span><span class="w"> </span><span class="n">List</span><span class="o">[</span><span class="n">str</span><span class="o">]</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">        </span><span class="o">*</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">        </span><span class="nl">extension</span><span class="p">:</span><span class="w"> </span><span class="nf">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">        </span><span class="nl">background</span><span class="p">:</span><span class="w"> </span><span class="nf">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">&quot;&quot;</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">external</span><span class="err">:</span><span class="w"> </span><span class="n">bool</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">False</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">    </span><span class="p">)</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="n">extension</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="err">{</span><span class="ss">&quot;jpg&quot;</span><span class="p">,</span><span class="w"> </span><span class="ss">&quot;png&quot;</span><span class="err">}:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">view_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f</span><span class="ss">&quot;images.text_{extension}&quot;</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">else</span><span class="err">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">view_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">f</span><span class="ss">&quot;images.text_{settings.DEFAULT_EXT}&quot;</span><span class="w"></span>
+
+<span class="w">        </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">app</span><span class="p">.</span><span class="n">url_for</span><span class="p">(</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">view_name</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">template_key</span><span class="o">=</span><span class="ss">&quot;custom&quot;</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="k">key</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="ss">&quot;_custom&quot;</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="n">self</span><span class="p">.</span><span class="k">key</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">text_paths</span><span class="o">=</span><span class="n">utils</span><span class="p">.</span><span class="nc">text</span><span class="p">.</span><span class="n">encode</span><span class="p">(</span><span class="n">text_lines</span><span class="p">),</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">_external</span><span class="o">=</span><span class="k">True</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">_scheme</span><span class="o">=</span><span class="n">settings</span><span class="p">.</span><span class="n">SCHEME</span><span class="p">,</span><span class="w"></span>
+
+<span class="w">        </span><span class="p">)</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nl">background</span><span class="p">:</span><span class="w"></span>
+
+<span class="w">            </span><span class="n">url</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="ss">&quot;?background=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">background</span><span class="w"></span>
+
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">url</span><span class="w"></span>
+</code></pre></div>
+
+
+</details>
+<h5 id="build_sample_url">build_sample_url</h5>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">build_sample_url</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">app</span><span class="p">:</span> <span class="n">sanic</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">Sanic</span><span class="p">,</span>
+    <span class="n">view_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;images.text_png&#39;</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">,</span>
+    <span class="n">external</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="n">build_sample_url</span><span class="p">(</span>
+
+        <span class="k">self</span><span class="p">,</span>
+
+        <span class="n">app</span><span class="p">:</span> <span class="n">Sanic</span><span class="p">,</span>
+
+        <span class="n">view_name</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="n">f</span><span class="ss">&quot;images.text_{settings.DEFAULT_EXT}&quot;</span><span class="p">,</span>
+
+        <span class="o">*</span><span class="p">,</span>
+
+        <span class="k">external</span><span class="p">:</span> <span class="n">bool</span> <span class="o">=</span> <span class="k">True</span><span class="p">,</span>
+
+    <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">str</span><span class="p">:</span>
+
+        <span class="n">kwargs</span> <span class="o">=</span> <span class="err">{</span>
+
+            <span class="ss">&quot;template_key&quot;</span><span class="p">:</span> <span class="k">self</span><span class="p">.</span><span class="k">key</span><span class="p">,</span>
+
+            <span class="ss">&quot;text_paths&quot;</span><span class="p">:</span> <span class="n">utils</span><span class="p">.</span><span class="nb">text</span><span class="p">.</span><span class="n">encode</span><span class="p">(</span><span class="k">self</span><span class="p">.</span><span class="n">sample</span><span class="p">),</span>
+
+            <span class="ss">&quot;_external&quot;</span><span class="p">:</span> <span class="k">external</span><span class="p">,</span>
+
+        <span class="err">}</span>
+
+        <span class="k">if</span> <span class="k">external</span><span class="p">:</span>
+
+            <span class="n">kwargs</span><span class="p">[</span><span class="ss">&quot;_scheme&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">settings</span><span class="p">.</span><span class="n">SCHEME</span>
+
+        <span class="k">return</span> <span class="n">app</span><span class="p">.</span><span class="n">url_for</span><span class="p">(</span><span class="n">view_name</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+</code></pre></div>
+
+
+</details>
+<h5 id="build_self_url">build_self_url</h5>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">build_self_url</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">app</span><span class="p">:</span> <span class="n">sanic</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">Sanic</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="n">build_self_url</span><span class="p">(</span><span class="k">self</span><span class="p">,</span> <span class="n">app</span><span class="p">:</span> <span class="n">Sanic</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">str</span><span class="p">:</span>
+
+        <span class="k">return</span> <span class="n">app</span><span class="p">.</span><span class="n">url_for</span><span class="p">(</span>
+
+            <span class="ss">&quot;templates.detail&quot;</span><span class="p">,</span>
+
+            <span class="k">key</span><span class="o">=</span><span class="k">self</span><span class="p">.</span><span class="k">key</span><span class="p">,</span>
+
+            <span class="n">_external</span><span class="o">=</span><span class="k">True</span><span class="p">,</span>
+
+            <span class="n">_scheme</span><span class="o">=</span><span class="n">settings</span><span class="p">.</span><span class="n">SCHEME</span><span class="p">,</span>
+
+        <span class="p">)</span>
+</code></pre></div>
+
+
+</details>
+<h5 id="get_image">get_image</h5>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">get_image</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">style</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">pathlib</span><span class="o">.</span><span class="n">Path</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="n">get_image</span><span class="p">(</span><span class="k">self</span><span class="p">,</span> <span class="n">style</span><span class="p">:</span> <span class="n">str</span> <span class="o">=</span> <span class="ss">&quot;&quot;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Path</span><span class="p">:</span>
+
+        <span class="n">style</span> <span class="o">=</span> <span class="n">style</span> <span class="k">or</span> <span class="n">settings</span><span class="p">.</span><span class="n">DEFAULT_STYLE</span>
+
+        <span class="k">self</span><span class="p">.</span><span class="n">directory</span><span class="p">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">exist_ok</span><span class="o">=</span><span class="k">True</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">path</span> <span class="k">in</span> <span class="k">self</span><span class="p">.</span><span class="n">directory</span><span class="p">.</span><span class="n">iterdir</span><span class="p">():</span>
+
+            <span class="k">if</span> <span class="n">path</span><span class="p">.</span><span class="n">stem</span> <span class="o">==</span> <span class="n">style</span><span class="p">:</span>
+
+                <span class="k">return</span> <span class="n">path</span>
+
+        <span class="k">if</span> <span class="n">style</span> <span class="o">==</span> <span class="n">settings</span><span class="p">.</span><span class="n">DEFAULT_STYLE</span><span class="p">:</span>
+
+            <span class="n">logger</span><span class="p">.</span><span class="n">debug</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;No default background image for template: {self.key}&quot;</span><span class="p">)</span>
+
+            <span class="k">return</span> <span class="k">self</span><span class="p">.</span><span class="n">directory</span> <span class="o">/</span> <span class="n">f</span><span class="ss">&quot;{settings.DEFAULT_STYLE}.img&quot;</span>
+
+        <span class="k">else</span><span class="p">:</span>
+
+            <span class="n">logger</span><span class="p">.</span><span class="n">warning</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;Style {style!r} not available for {self.key}&quot;</span><span class="p">)</span>
+
+            <span class="k">return</span> <span class="k">self</span><span class="p">.</span><span class="n">get_image</span><span class="p">()</span>
+</code></pre></div>
+
+
+</details>
+<h5 id="jsonify">jsonify</h5>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">jsonify</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">app</span><span class="p">:</span> <span class="n">sanic</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">Sanic</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="n">jsonify</span><span class="p">(</span><span class="k">self</span><span class="p">,</span> <span class="n">app</span><span class="p">:</span> <span class="n">Sanic</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
+
+        <span class="k">return</span> <span class="err">{</span>
+
+            <span class="ss">&quot;name&quot;</span><span class="p">:</span> <span class="k">self</span><span class="p">.</span><span class="n">name</span><span class="p">,</span>
+
+            <span class="ss">&quot;key&quot;</span><span class="p">:</span> <span class="k">self</span><span class="p">.</span><span class="k">key</span><span class="p">,</span>
+
+            <span class="ss">&quot;styles&quot;</span><span class="p">:</span> <span class="k">self</span><span class="p">.</span><span class="n">styles</span><span class="p">,</span>
+
+            <span class="ss">&quot;blank&quot;</span><span class="p">:</span> <span class="n">app</span><span class="p">.</span><span class="n">url_for</span><span class="p">(</span>
+
+                <span class="n">f</span><span class="ss">&quot;images.blank_{settings.DEFAULT_EXT}&quot;</span><span class="p">,</span>
+
+                <span class="n">template_key</span><span class="o">=</span><span class="k">self</span><span class="p">.</span><span class="k">key</span><span class="p">,</span>
+
+                <span class="n">_external</span><span class="o">=</span><span class="k">True</span><span class="p">,</span>
+
+                <span class="n">_scheme</span><span class="o">=</span><span class="n">settings</span><span class="p">.</span><span class="n">SCHEME</span><span class="p">,</span>
+
+            <span class="p">),</span>
+
+            <span class="ss">&quot;sample&quot;</span><span class="p">:</span> <span class="k">self</span><span class="p">.</span><span class="n">build_sample_url</span><span class="p">(</span><span class="n">app</span><span class="p">),</span>
+
+            <span class="ss">&quot;source&quot;</span><span class="p">:</span> <span class="k">self</span><span class="p">.</span><span class="k">source</span><span class="p">,</span>
+
+            <span class="ss">&quot;_self&quot;</span><span class="p">:</span> <span class="k">self</span><span class="p">.</span><span class="n">build_self_url</span><span class="p">(</span><span class="n">app</span><span class="p">),</span>
+
+        <span class="err">}</span>
+</code></pre></div>
+
+
+</details>
+<h3 id="text">Text</h3>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">Text</span><span class="p">(</span>
+    <span class="n">color</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;white&#39;</span><span class="p">,</span>
+    <span class="n">style</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;upper&#39;</span><span class="p">,</span>
+    <span class="n">anchor_x</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
+    <span class="n">anchor_y</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
+    <span class="n">angle</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="n">scale_x</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>
+    <span class="n">scale_y</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.2</span>
+<span class="p">)</span>
+</code></pre></div>
+
+
+<p>Text(color: str = 'white', style: str = 'upper', anchor_x: float = 0.0, anchor_y: float = 0.0, angle: float = 0, scale_x: float = 1.0, scale_y: float = 0.2)</p>
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="n">Text:</span>
+
+    <span class="n">color:</span> <span class="n">str</span> = <span class="s">&quot;white&quot;</span>
+
+    <span class="n">style:</span> <span class="n">str</span> = <span class="s">&quot;upper&quot;</span>
+
+    <span class="n">anchor_x:</span> <span class="n">float</span> = <span class="mf">0.0</span>
+
+    <span class="n">anchor_y:</span> <span class="n">float</span> = <span class="mf">0.0</span>
+
+    <span class="n">angle:</span> <span class="n">float</span> = <span class="mi">0</span>
+
+    <span class="n">scale_x:</span> <span class="n">float</span> = <span class="mf">1.0</span>
+
+    <span class="n">scale_y:</span> <span class="n">float</span> = <span class="mf">0.2</span>
+
+    <span class="n">def</span> <span class="n">get_anchor</span>(<span class="nb">self</span>, <span class="n">image_size:</span> <span class="n">Dimensions</span>) -&gt; <span class="n">Point:</span>
+
+        <span class="n">image_width</span>, <span class="n">image_height</span> = <span class="n">image_size</span>
+
+        <span class="k">return</span> <span class="n">int</span>(<span class="n">image_width</span> * <span class="nb">self</span>.<span class="n">anchor_x</span>), <span class="n">int</span>(<span class="n">image_height</span> * <span class="nb">self</span>.<span class="n">anchor_y</span>)
+
+    <span class="n">def</span> <span class="n">get_size</span>(<span class="nb">self</span>, <span class="n">image_size:</span> <span class="n">Dimensions</span>) -&gt; <span class="n">Dimensions:</span>
+
+        <span class="n">image_width</span>, <span class="n">image_height</span> = <span class="n">image_size</span>
+
+        <span class="k">return</span> <span class="n">int</span>(<span class="n">image_width</span> * <span class="nb">self</span>.<span class="n">scale_x</span>), <span class="n">int</span>(<span class="n">image_height</span> * <span class="nb">self</span>.<span class="n">scale_y</span>)
+
+    <span class="n">def</span> <span class="n">stylize</span>(<span class="nb">self</span>, <span class="n">text:</span> <span class="n">str</span>) -&gt; <span class="n">str:</span>
+
+        <span class="k">if</span> <span class="nb">self</span>.<span class="n">style</span> == <span class="s">&quot;none&quot;</span>:
+
+            <span class="k">return</span> <span class="n">text</span>
+
+        <span class="k">if</span> <span class="nb">self</span>.<span class="n">style</span> == <span class="s">&quot;default&quot;</span>:
+
+            <span class="k">return</span> <span class="n">text</span>.<span class="n">capitalize</span>() <span class="k">if</span> <span class="n">text</span>.<span class="n">islower</span>() <span class="k">else</span> <span class="n">text</span>
+
+        <span class="k">if</span> <span class="nb">self</span>.<span class="n">style</span> == <span class="s">&quot;mock&quot;</span>:
+
+            <span class="k">return</span> <span class="n">spongemock</span>.<span class="n">mock</span>(<span class="n">text</span>, <span class="n">diversity_bias</span>=<span class="mf">0.75</span>, <span class="n">random_seed</span>=<span class="mi">0</span>)
+
+        <span class="k">method</span> = <span class="n">getattr</span>(<span class="n">text</span>, <span class="nb">self</span>.<span class="n">style</span> <span class="o">or</span> <span class="nb">self</span>.<span class="n">__class__</span>.<span class="n">style</span>, <span class="n">None</span>)
+
+        <span class="k">if</span> <span class="n">method:</span>
+
+            <span class="k">return</span> <span class="k">method</span>()
+
+        <span class="n">logger</span>.<span class="n">warning</span>(<span class="nb">f</span><span class="s">&quot;Unsupported text style: {self.style}&quot;</span>)
+
+        <span class="k">return</span> <span class="n">text</span>
+</code></pre></div>
+
+
+</details>
+<hr />
+<h4 id="class-variables_1">Class variables</h4>
+<div class="codehilite"><pre><span></span><code><span class="n">anchor_x</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">anchor_y</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">angle</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">color</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">scale_x</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">scale_y</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">style</span>
+</code></pre></div>
+
+
+<h4 id="methods_1">Methods</h4>
+<h5 id="get_anchor">get_anchor</h5>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">get_anchor</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">image_size</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="n">get_anchor</span><span class="p">(</span><span class="k">self</span><span class="p">,</span> <span class="n">image_size</span><span class="p">:</span> <span class="n">Dimensions</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Point</span><span class="p">:</span>
+
+        <span class="n">image_width</span><span class="p">,</span> <span class="n">image_height</span> <span class="o">=</span> <span class="n">image_size</span>
+
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">image_width</span> <span class="o">*</span> <span class="k">self</span><span class="p">.</span><span class="n">anchor_x</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">image_height</span> <span class="o">*</span> <span class="k">self</span><span class="p">.</span><span class="n">anchor_y</span><span class="p">)</span>
+</code></pre></div>
+
+
+</details>
+<h5 id="get_size">get_size</h5>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">get_size</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">image_size</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="n">get_size</span><span class="p">(</span><span class="k">self</span><span class="p">,</span> <span class="n">image_size</span><span class="p">:</span> <span class="n">Dimensions</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dimensions</span><span class="p">:</span>
+
+        <span class="n">image_width</span><span class="p">,</span> <span class="n">image_height</span> <span class="o">=</span> <span class="n">image_size</span>
+
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">image_width</span> <span class="o">*</span> <span class="k">self</span><span class="p">.</span><span class="n">scale_x</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">image_height</span> <span class="o">*</span> <span class="k">self</span><span class="p">.</span><span class="n">scale_y</span><span class="p">)</span>
+</code></pre></div>
+
+
+</details>
+<h5 id="stylize">stylize</h5>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">stylize</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">,</span>
+    <span class="n">text</span><span class="p">:</span> <span class="nb">str</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span>
+</code></pre></div>
+
+
+<details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code>    <span class="n">def</span> <span class="n">stylize</span><span class="p">(</span><span class="k">self</span><span class="p">,</span> <span class="nb">text</span><span class="p">:</span> <span class="n">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">str</span><span class="p">:</span>
+
+        <span class="k">if</span> <span class="k">self</span><span class="p">.</span><span class="n">style</span> <span class="o">==</span> <span class="ss">&quot;none&quot;</span><span class="p">:</span>
+
+            <span class="k">return</span> <span class="nb">text</span>
+
+        <span class="k">if</span> <span class="k">self</span><span class="p">.</span><span class="n">style</span> <span class="o">==</span> <span class="ss">&quot;default&quot;</span><span class="p">:</span>
+
+            <span class="k">return</span> <span class="nb">text</span><span class="p">.</span><span class="n">capitalize</span><span class="p">()</span> <span class="k">if</span> <span class="nb">text</span><span class="p">.</span><span class="n">islower</span><span class="p">()</span> <span class="k">else</span> <span class="nb">text</span>
+
+        <span class="k">if</span> <span class="k">self</span><span class="p">.</span><span class="n">style</span> <span class="o">==</span> <span class="ss">&quot;mock&quot;</span><span class="p">:</span>
+
+            <span class="k">return</span> <span class="n">spongemock</span><span class="p">.</span><span class="n">mock</span><span class="p">(</span><span class="nb">text</span><span class="p">,</span> <span class="n">diversity_bias</span><span class="o">=</span><span class="mi">0</span><span class="p">.</span><span class="mi">75</span><span class="p">,</span> <span class="n">random_seed</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+
+        <span class="k">method</span> <span class="o">=</span> <span class="n">getattr</span><span class="p">(</span><span class="nb">text</span><span class="p">,</span> <span class="k">self</span><span class="p">.</span><span class="n">style</span> <span class="k">or</span> <span class="k">self</span><span class="p">.</span><span class="n">__class__</span><span class="p">.</span><span class="n">style</span><span class="p">,</span> <span class="k">None</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="k">method</span><span class="p">:</span>
+
+            <span class="k">return</span> <span class="k">method</span><span class="p">()</span>
+
+        <span class="n">logger</span><span class="p">.</span><span class="n">warning</span><span class="p">(</span><span class="n">f</span><span class="ss">&quot;Unsupported text style: {self.style}&quot;</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="nb">text</span>
+</code></pre></div>
+
+
+</details>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../" title="Index" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Index
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../settings/" title="Settings" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Settings
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Powered by
+        <a href="http://timothycrosley.github.io/portray">portray.</a>
+        You too can
+        <a href="http://timothycrosley.github.io/portray">
+          portray</a>
+        your Python project well using automatic documentation.
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/vendor.2d1db4bd.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.6627ddf3.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.5eca75d3.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
