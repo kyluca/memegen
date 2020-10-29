@@ -1393,45 +1393,45 @@
 
 <details class="example"><summary>View Source</summary><div class="codehilite"><pre><span></span><code><span class="n">def</span> <span class="n">add_blurred_background</span><span class="p">(</span>
 
-    <span class="n">foreground</span><span class="p">:</span> <span class="n">Image</span><span class="p">,</span> <span class="n">background</span><span class="p">:</span> <span class="n">Image</span><span class="p">,</span> <span class="n">width</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">height</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="nl">foreground:</span> <span class="n">Image</span><span class="p">,</span> <span class="nl">background:</span> <span class="n">Image</span><span class="p">,</span> <span class="nl">width:</span> <span class="kt">int</span><span class="p">,</span> <span class="nl">height:</span> <span class="kt">int</span>
 
-<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Image</span><span class="p">:</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="nl">Image:</span>
 
-    <span class="n">base_width</span><span class="p">,</span> <span class="n">base_height</span> <span class="o">=</span> <span class="n">foreground</span><span class="p">.</span><span class="k">size</span>
+    <span class="n">base_width</span><span class="p">,</span> <span class="n">base_height</span> <span class="o">=</span> <span class="n">foreground</span><span class="p">.</span><span class="n">size</span>
 
-    <span class="n">border_width</span> <span class="o">=</span> <span class="k">min</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">base_width</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">border_width</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">base_width</span> <span class="o">+</span> <span class="mh">2</span><span class="p">)</span>
 
-    <span class="n">border_height</span> <span class="o">=</span> <span class="k">min</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">base_height</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">border_height</span> <span class="o">=</span> <span class="n">min</span><span class="p">(</span><span class="n">height</span><span class="p">,</span> <span class="n">base_height</span> <span class="o">+</span> <span class="mh">2</span><span class="p">)</span>
 
     <span class="n">border_dimensions</span> <span class="o">=</span> <span class="n">border_width</span><span class="p">,</span> <span class="n">border_height</span>
 
-    <span class="n">border</span> <span class="o">=</span> <span class="n">Image</span><span class="p">.</span><span class="k">new</span><span class="p">(</span><span class="ss">&quot;RGB&quot;</span><span class="p">,</span> <span class="n">border_dimensions</span><span class="p">)</span>
+    <span class="n">border</span> <span class="o">=</span> <span class="n">Image</span><span class="p">.</span><span class="n">new</span><span class="p">(</span><span class="s">&quot;RGB&quot;</span><span class="p">,</span> <span class="n">border_dimensions</span><span class="p">)</span>
 
     <span class="n">border</span><span class="p">.</span><span class="n">paste</span><span class="p">(</span>
 
         <span class="n">foreground</span><span class="p">,</span>
 
-        <span class="p">((</span><span class="n">border_width</span> <span class="o">-</span> <span class="n">base_width</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span> <span class="p">(</span><span class="n">border_height</span> <span class="o">-</span> <span class="n">base_height</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">),</span>
+        <span class="p">((</span><span class="n">border_width</span> <span class="o">-</span> <span class="n">base_width</span><span class="p">)</span> <span class="c1">// 2, (border_height - base_height) // 2),</span>
 
     <span class="p">)</span>
 
     <span class="n">padded</span> <span class="o">=</span> <span class="n">background</span><span class="p">.</span><span class="n">resize</span><span class="p">((</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">),</span> <span class="n">Image</span><span class="p">.</span><span class="n">LANCZOS</span><span class="p">)</span>
 
-    <span class="n">darkened</span> <span class="o">=</span> <span class="n">padded</span><span class="p">.</span><span class="n">point</span><span class="p">(</span><span class="n">lambda</span> <span class="n">p</span><span class="p">:</span> <span class="n">p</span> <span class="o">*</span> <span class="mi">0</span><span class="p">.</span><span class="mi">4</span><span class="p">)</span>
+    <span class="n">darkened</span> <span class="o">=</span> <span class="n">padded</span><span class="p">.</span><span class="n">point</span><span class="p">(</span><span class="n">lambda</span> <span class="nl">p:</span> <span class="n">p</span> <span class="o">*</span> <span class="mf">0.4</span><span class="p">)</span>
 
-    <span class="n">blurred</span> <span class="o">=</span> <span class="n">darkened</span><span class="p">.</span><span class="n">filter</span><span class="p">(</span><span class="n">ImageFilter</span><span class="p">.</span><span class="n">GaussianBlur</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+    <span class="n">blurred</span> <span class="o">=</span> <span class="n">darkened</span><span class="p">.</span><span class="n">filter</span><span class="p">(</span><span class="n">ImageFilter</span><span class="p">.</span><span class="n">GaussianBlur</span><span class="p">(</span><span class="mh">5</span><span class="p">))</span>
 
-    <span class="n">blurred_width</span><span class="p">,</span> <span class="n">blurred_height</span> <span class="o">=</span> <span class="n">blurred</span><span class="p">.</span><span class="k">size</span>
+    <span class="n">blurred_width</span><span class="p">,</span> <span class="n">blurred_height</span> <span class="o">=</span> <span class="n">blurred</span><span class="p">.</span><span class="n">size</span>
 
-    <span class="k">offset</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">offset</span> <span class="o">=</span> <span class="p">(</span>
 
-        <span class="p">(</span><span class="n">blurred_width</span> <span class="o">-</span> <span class="n">border_width</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="p">(</span><span class="n">blurred_width</span> <span class="o">-</span> <span class="n">border_width</span><span class="p">)</span> <span class="c1">// 2,</span>
 
-        <span class="p">(</span><span class="n">blurred_height</span> <span class="o">-</span> <span class="n">border_height</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="p">(</span><span class="n">blurred_height</span> <span class="o">-</span> <span class="n">border_height</span><span class="p">)</span> <span class="c1">// 2,</span>
 
     <span class="p">)</span>
 
-    <span class="n">blurred</span><span class="p">.</span><span class="n">paste</span><span class="p">(</span><span class="n">border</span><span class="p">,</span> <span class="k">offset</span><span class="p">)</span>
+    <span class="n">blurred</span><span class="p">.</span><span class="n">paste</span><span class="p">(</span><span class="n">border</span><span class="p">,</span> <span class="n">offset</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="n">blurred</span>
 </code></pre></div>
